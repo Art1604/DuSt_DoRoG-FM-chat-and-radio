@@ -3,327 +3,358 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>ПыЛь_ДоРоГ FM — VK Widget</title>
-  <meta name="description" content="Мини-приложение ПыЛь_ДоРоГ FM: радио и чат" />
-  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=GzJUep9YWwV0B64l2OgOmeQ93Rs_PeSSG9b-s0u-BauKNPoCOiIc3F8nVlx3F1NbaZS8iPqVm42-dAdRZqq7i1LKpJpz1vgbjOswfy5SK8pwSRAB89cifY5Dh2VLjMSywy0zv-WLoAX03b-1iXqNohVG019laWLUe65X4e4bC8oCVfPnoZk9LRGxvU1Advn1uvhipArptTWXdD_YVFnolx8pJqdWYmXv9MJPDPgRzxT6WzLvv2A02fF2PTKCwAgWJgukH_ngndAGp6uQHcKdeA" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDNjYzg3MWY5YmYwZjU4Mzg4MTMzZWM3ZCZ0cz00OTMwMjMmcD1mcyZjaWQ9MSZzaWc9YzM4NmZhYThmMDBiNmFkMjIyYTM4ZmZhZDIxZTE4N2QyMTAxNTVlMjE4NjE0ZWVhMzUzOWVmZjdjNmViMmYyYSZ2PTA"/><style>
-    :root {
-      --bg: #d9d9dc;
-      --panel: #e8e8ea;
-      --panel-2: #efeff1;
-      --line: #b7b7bb;
-      --line-light: rgba(255,255,255,.75);
-      --text: #2f3640;
-      --muted: #67707d;
-      --shadow: 0 18px 44px rgba(0,0,0,.14);
-      --radius: 22px;
-      --radius-sm: 12px;
+  <title>ПыЛь_ДоРоГ FM — ретро-дизайн</title>
+  <meta name="description" content="ПыЛь_ДоРоГ FM — радио и чат в сером ретро-дизайне." />
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=zi7zim_Q1DvOULOwXeQ5-cQY3uvYD-QIRfqVREe4RxJEoC0POyzc3F3lB2bLwTAkgRBw8HuqvQWRR_zizIeG65KEP1Kx_D-0DzAdG_65_UNJJDTc_JKP3qf4m6Cket6inoEOu1CkIgumN1fiwWiGJBSCpAtwCZ_UUEea_neF2XpvqJXBFz-7LiJ8X-oliJBg_pW9rZ90RtwbjMwwuuUg9nwcCpWE7zuGRwjL2QKDPiZFL9bgfZ-g_dEf_Vvdv1uTWFJt5qU3XcOh-LszX8X8EA" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDNhYjg3MjQzYWQ0YTc1M2VkYmJjMjc2ZSZ0cz00OTMwMjMmcD1mcyZjaWQ9MSZzaWc9YjRhNjdmMGMwNDczMzdiNTE1MDgzYzcwMzI3YmNlY2FjYmM0Mjk0YWM5ZTliMDIwZmQ1MDAyNDlmMDdiOGRhNSZ2PTA"/><style>
+    :root{
+      --page:#c9c9cc;
+      --page2:#d4d4d7;
+      --panel:#dddddf;
+      --panel-2:#e6e6e8;
+      --panel-3:#f3f3f4;
+      --line:#b5b5b9;
+      --line-dark:#8f8f95;
+      --text:#323947;
+      --muted:#626a75;
+      --green:#3f8f34;
+      --shadow:0 18px 40px rgba(0,0,0,.12);
     }
 
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      background: linear-gradient(180deg, #dddddf 0%, #d3d3d6 100%);
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100%;
+      background:linear-gradient(180deg,var(--page) 0%, var(--page2) 100%);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      color:var(--text);
     }
 
-    body {
-      padding: 24px;
+    .page{
+      max-width:1300px;
+      margin:44px auto;
+      padding:0 18px;
     }
 
-    .app {
-      width: min(1280px, 100%);
-      margin: 0 auto;
-      background: linear-gradient(180deg, #ececef 0%, #e5e5e8 100%);
-      border: 1px solid rgba(125,125,130,.35);
-      border-radius: 26px;
-      box-shadow: var(--shadow);
-      padding: 26px;
+    .outer{
+      background:linear-gradient(180deg,#dcdcdf 0%, #d2d2d6 100%);
+      border:1px solid #bbbbbf;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:26px;
     }
 
-    .frame {
-      background: linear-gradient(180deg, #ebebed 0%, #dfdfe2 100%);
-      border: 1px solid rgba(126,126,130,.35);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.7),
-        0 2px 8px rgba(0,0,0,.05);
+    .inner{
+      background:linear-gradient(180deg,#e1e1e4 0%, #d9d9dc 100%);
+      border:1px solid #c0c0c4;
+      border-radius:16px;
+      padding:24px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
     }
 
-    .title {
-      margin: 0 0 18px;
-      text-align: center;
-      font-size: clamp(30px, 3vw, 52px);
-      line-height: 1.05;
-      font-weight: 800;
-      letter-spacing: .02em;
-      color: #313844;
-      text-shadow: 0 1px 0 rgba(255,255,255,.7);
+    h1{
+      margin:0 0 18px;
+      text-align:center;
+      font-size: clamp(34px, 3vw, 56px);
+      line-height:1.05;
+      letter-spacing:.01em;
+      font-weight:800;
+      color:#303744;
+      text-shadow:0 1px 0 rgba(255,255,255,.8);
     }
 
-    .card {
-      background: linear-gradient(180deg, #ececef 0%, #e7e7ea 100%);
-      border: 1px solid rgba(136,136,140,.45);
-      border-radius: 16px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+    .player-panel,
+    .chat-shell{
+      background:linear-gradient(180deg,#dfdfe2 0%, #d5d5d9 100%);
+      border:1px solid #b7b7bc;
+      border-radius:14px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.82);
     }
 
-    .player-shell {
-      padding: 18px;
-      margin-bottom: 18px;
+    .player-panel{
+      padding:20px;
+      margin-bottom:26px;
     }
 
-    .player-host {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 12px;
-      background: linear-gradient(180deg, rgba(255,255,255,.45), rgba(255,255,255,.2));
-      border: 1px solid rgba(126,126,130,.3);
+    .player-bar{
+      min-height:72px;
+      border-radius:12px;
+      border:1px solid #babac0;
+      background:linear-gradient(180deg,#efeff1 0%, #dfdfe2 100%);
+      display:flex;
+      align-items:center;
+      gap:18px;
+      padding:12px 16px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.86);
     }
 
-    .player-fallback {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      padding: 14px 18px;
-      color: #3a4350;
-      font-size: 18px;
-      font-weight: 600;
+    .play-box{
+      width:48px;
+      height:48px;
+      border-radius:8px;
+      background:linear-gradient(180deg,#d6d6da 0%, #c6c6cb 100%);
+      border:1px solid #b9b9bf;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+      position:relative;
+      flex:0 0 auto;
+      cursor:pointer;
     }
 
-    .play-btn {
-      width: 42px;
-      height: 42px;
-      border: 0;
-      border-radius: 10px;
-      background: linear-gradient(180deg, #d9d9dc 0%, #c7c7cb 100%);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 1px 2px rgba(0,0,0,.12);
-      position: relative;
-      flex: 0 0 auto;
-      cursor: pointer;
+    .play-box::before{
+      content:"";
+      position:absolute;
+      left:17px;
+      top:13px;
+      width:0;height:0;
+      border-top:11px solid transparent;
+      border-bottom:11px solid transparent;
+      border-left:18px solid #4d5562;
     }
 
-    .play-btn::before {
-      content: "";
-      position: absolute;
-      left: 16px;
-      top: 12px;
-      width: 0;
-      height: 0;
-      border-top: 9px solid transparent;
-      border-bottom: 9px solid transparent;
-      border-left: 14px solid #515866;
+    .player-copy{
+      flex:1 1 auto;
+      min-width:0;
+      font-size:18px;
+      color:#414957;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .player-copy b{font-size:21px;color:#2f3744}
+
+    .player-icons{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex:0 0 auto;
+      font-weight:800;
+      color:#39404c;
+      font-size:17px;
     }
 
-    .player-meta {
-      flex: 1 1 auto;
-      min-width: 0;
+    .headphone{font-size:27px;line-height:1}
+    .bars{display:flex;align-items:flex-end;gap:4px;height:22px}
+    .bars span{display:block;width:6px;background:#39404c;border-radius:2px}
+    .bars span:nth-child(1){height:14px}.bars span:nth-child(2){height:21px}.bars span:nth-child(3){height:20px}.bars span:nth-child(4){height:17px}.bars span:nth-child(5){height:23px}
+    .chev{font-size:21px}
+
+    .live-player-wrap{
+      display:none;
+      margin-top:14px;
+      padding:14px;
+      border-radius:12px;
+      background:rgba(255,255,255,.35);
+      border:1px solid #c1c1c7;
     }
 
-    .player-meta b { font-weight: 800; }
-
-    .player-side {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      color: #444b57;
-      font-weight: 700;
-      white-space: nowrap;
+    .chat-shell{overflow:hidden}
+    .chat-header{
+      height:48px;
+      border-bottom:1px solid #b8b8be;
+      background:linear-gradient(180deg,#e6e6e8 0%, #dbdbde 100%);
+      position:relative;
     }
 
-    .bars {
-      display: inline-flex;
-      gap: 4px;
-      align-items: end;
-      height: 22px;
+    .gear{
+      position:absolute;
+      left:12px;
+      top:11px;
+      width:30px;height:30px;
+      border-radius:7px;
+      display:grid;place-items:center;
+      background:linear-gradient(180deg,#d8d8dc 0%, #c8c8cd 100%);
+      border:1px solid #a8a8af;
+      color:#59616c;
+      font-size:18px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.86);
     }
 
-    .bars span {
-      width: 6px;
-      background: #444b57;
-      border-radius: 2px;
+    .chat-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 250px;
+      min-height:620px;
+      background:#d8d8db;
     }
 
-    .bars span:nth-child(1) { height: 11px; }
-    .bars span:nth-child(2) { height: 18px; }
-    .bars span:nth-child(3) { height: 22px; }
-    .bars span:nth-child(4) { height: 14px; }
-    .bars span:nth-child(5) { height: 20px; }
-
-    .chat-shell {
-      padding: 0;
-      overflow: hidden;
+    .messages-col{
+      padding:14px 8px 0 14px;
+      border-right:1px solid #b9b9be;
+      min-width:0;
+      display:flex;
+      flex-direction:column;
     }
 
-    .chat-top-line {
-      height: 22px;
-      border-bottom: 1px solid rgba(136,136,140,.45);
-      background: linear-gradient(180deg, #efeff1 0%, #e5e5e8 100%);
-      position: relative;
+    .users-col{
+      padding:14px 12px 0;
+      background:linear-gradient(180deg,#dddddf 0%, #d4d4d8 100%);
     }
 
-    .gear {
-      position: absolute;
-      left: 14px;
-      top: 10px;
-      width: 28px;
-      height: 28px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: linear-gradient(180deg, #d7d7da 0%, #c4c4c8 100%);
-      border: 1px solid rgba(126,126,130,.45);
-      color: #5a616d;
-      font-size: 16px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.85), 0 1px 2px rgba(0,0,0,.1);
-      z-index: 2;
+    .messages-frame,
+    .users-frame{
+      background:linear-gradient(180deg,#f0f0f1 0%, #ececed 100%);
+      border:1px solid #b8b8be;
+      border-radius:14px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.88);
+      overflow:hidden;
     }
 
-    .chat-body {
-      display: grid;
-      grid-template-columns: 1fr 240px;
-      gap: 0;
-      min-height: 640px;
-      background: #ececee;
+    .messages-frame{height:470px;display:flex;flex-direction:column}
+    .users-frame{height:470px;position:relative}
+
+    .demo-chat{
+      padding:10px 0 0;
+      overflow:auto;
+      background:#f4f4f5;
+      scrollbar-width:thin;
     }
 
-    .chat-main {
-      padding: 18px 12px 12px 12px;
-      border-right: 1px solid rgba(136,136,140,.45);
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
+    .row{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 58px;
+      align-items:start;
+      gap:10px;
+      padding:8px 14px;
+      font-size:17px;
+      line-height:1.35;
     }
 
-    .chat-board {
-      flex: 1 1 auto;
-      min-height: 0;
-      border-radius: 16px 0 0 0;
-      overflow: hidden;
-      background: #f8f8f9;
-      border: 1px solid rgba(136,136,140,.35);
+    .row:nth-child(even){background:rgba(0,0,0,.03)}
+    .msg{min-width:0;word-break:break-word}
+    .time{text-align:right;color:#7b838e;font-size:13px;padding-top:4px}
+    .name{font-weight:800;color:#323947}
+    .name.green{color:var(--green)}
+    .name.gray{color:#5c6471}
+
+    .controls{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:12px 0 12px;
+      color:#5d6470;
+      font-size:14px;
     }
 
-    .chat-host {
-      width: 100%;
-      height: 100%;
-      min-height: 560px;
-      background: #fff;
+    .controls-left{display:flex;gap:10px;flex-wrap:wrap}
+
+    .mini-btn,
+    .send-btn{
+      border:1px solid #a8a8af;
+      background:linear-gradient(180deg,#d9d9dc 0%, #c7c7cb 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.88);
+      color:#4b5360;
+      font-weight:700;
+      cursor:pointer;
     }
 
-    .chat-fallback {
-      height: 100%;
-      padding: 14px;
-      background:
-        linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    .mini-btn{
+      border-radius:10px;
+      padding:8px 12px;
+      font-size:14px;
     }
 
-    .bubble {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 10px;
-      align-items: start;
-      padding: 10px 14px;
-      margin-bottom: 6px;
-      background: #efefef;
-      border-radius: 6px;
-      color: #323842;
-      font-size: 16px;
-      line-height: 1.35;
+    .users-list{
+      list-style:none;
+      margin:0;
+      padding:12px 12px 32px;
+      font-size:17px;
+      line-height:1.55;
+      color:#313947;
+      overflow:auto;
+      height:100%;
+    }
+    .users-list li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .users-list .online{color:var(--green);font-weight:800}
+    .users-list .crown{color:var(--green)}
+
+    .scrollbar{
+      position:absolute;
+      right:8px;
+      top:14px;
+      width:22px;
+      height:412px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#d5d5d9 0%, #c9c9ce 100%);
+      border:1px solid #a8a8af;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.78);
+      pointer-events:none;
+    }
+    .scrollbar::before{
+      content:"";
+      position:absolute;
+      left:3px;
+      top:0;
+      width:14px;height:180px;
+      border-radius:10px;
+      background:linear-gradient(180deg,#8f949c 0%, #6f7680 100%);
     }
 
-    .bubble b {
-      font-size: 18px;
+    .input-bar{
+      display:grid;
+      grid-template-columns:140px minmax(0,1fr) 146px;
+      gap:10px;
+      padding:10px 14px 14px;
+      background:linear-gradient(180deg,#e5e5e7 0%, #d9d9dc 100%);
+      border-top:1px solid #b8b8be;
     }
 
-    .bubble .time {
-      font-size: 12px;
-      color: #69717c;
-      padding-top: 4px;
-      white-space: nowrap;
+    .input-like,
+    .nick-like{
+      min-height:40px;
+      border-radius:9px;
+      border:1px solid #b4b4ba;
+      background:linear-gradient(180deg,#efeff0 0%, #e2e2e5 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.86);
+      padding:10px 14px;
+      font-size:16px;
+      color:#4c5461;
+      display:flex;
+      align-items:center;
+    }
+    .nick-like{justify-content:center;font-weight:700;color:#363d49}
+    .input-like{color:#8a8f98}
+
+    .send-btn{
+      border-radius:10px;
+      font-size:18px;
+      color:#ffffff;
+      background:linear-gradient(180deg,#9ea4ad 0%, #7f8793 100%);
+      border-color:#808894;
+      padding:0 16px;
     }
 
-    .users {
-      padding: 18px 12px 12px 12px;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
+    .live-chat-wrap{
+      display:none;
+      height:100%;
+      min-height:470px;
+      background:#fff;
     }
 
-    .users-panel {
-      flex: 1 1 auto;
-      min-height: 0;
-      border-radius: 0 16px 0 0;
-      border: 1px solid rgba(136,136,140,.35);
-      background: linear-gradient(180deg, #f7f7f8 0%, #ededf0 100%);
-      padding: 12px 10px;
-      overflow: auto;
+    .live-chat-wrap > div,
+    .live-chat-wrap iframe{
+      width:100%;
+      height:100%;
+      border:0;
     }
 
-    .user-item {
-      padding: 7px 6px;
-      font-size: 15px;
-      color: #39414e;
-      border-radius: 8px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .footer-note{
+      margin-top:14px;
+      text-align:center;
+      color:#626a75;
+      font-size:14px;
     }
 
-    .user-item.host { color: #3e8b2f; font-weight: 700; }
+    a{color:inherit}
 
-    .chat-bottom {
-      display: grid;
-      grid-template-columns: 160px 1fr 140px;
-      gap: 10px;
-      padding: 10px 12px 12px;
-      background: linear-gradient(180deg, #efeff1 0%, #e4e4e7 100%);
-      border-top: 1px solid rgba(136,136,140,.45);
-    }
-
-    .nick,
-    .message-input,
-    .send-btn {
-      height: 42px;
-      border-radius: 10px;
-      border: 1px solid rgba(136,136,140,.5);
-      background: linear-gradient(180deg, #f8f8f9 0%, #ebebee 100%);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
-      font-size: 16px;
-    }
-
-    .nick,
-    .message-input {
-      padding: 0 14px;
-      color: #4b5260;
-    }
-
-    .send-btn {
-      font-weight: 800;
-      color: #5b616e;
-      cursor: pointer;
-    }
-
-    a { color: inherit; }
-
-    @media (max-width: 980px) {
-      body { padding: 12px; }
-      .app { padding: 14px; border-radius: 20px; }
-      .chat-body { grid-template-columns: 1fr; }
-      .users { display: none; }
-      .chat-board { border-radius: 16px 16px 0 0; }
-      .chat-bottom { grid-template-columns: 1fr; }
-      .nick { order: 1; }
-      .message-input { order: 2; }
-      .send-btn { order: 3; }
-      .player-fallback { flex-wrap: wrap; }
+    @media (max-width: 980px){
+      .chat-grid{grid-template-columns:1fr}
+      .users-col{padding-top:0}
+      .users-frame,.scrollbar{display:none}
+      .input-bar{grid-template-columns:1fr}
+      .send-btn{min-height:44px}
+      .nick-like{justify-content:flex-start}
+      .player-bar{flex-wrap:wrap}
+      .player-icons{margin-left:auto}
     }
   </style>
 </head>
@@ -331,137 +362,129 @@
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
   <script>
     (async () => {
-      try {
-        if (window.vkBridge) {
-          await vkBridge.send('VKWebAppInit');
-        }
-      } catch (e) {
-        console.warn('VK Bridge init failed', e);
-      }
+      try { await vkBridge.send('VKWebAppInit'); } catch (e) {}
     })();
   </script>
 
-  <main class="app">
-    <section class="frame">
-      <h1 class="title">ПыЛь_ДоРоГ FM</h1>
+  <div class="page">
+    <div class="outer">
+      <div class="inner">
+        <h1>ПыЛь_ДоРоГ FM</h1>
 
-      <div class="card player-shell">
-        <div class="player-host" id="player-host">
-          <div class="player-fallback" id="player-fallback">
-            <button class="play-btn" type="button" aria-label="Воспроизвести"></button>
-            <div class="player-meta">
+        <section class="player-panel">
+          <div class="player-bar">
+            <button class="play-box" id="togglePlayer" aria-label="Открыть плеер"></button>
+            <div class="player-copy">
               <b>ПыЛь_ДоРоГ FM</b> — Включай звук свободы! Музыка с тобой, куда бы ты ни ехал!
             </div>
-            <div class="player-side">
-              <span>🎧 60</span>
-              <span class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
-              <span>∨</span>
+            <div class="player-icons" aria-hidden="true">
+              <span class="headphone">🎧</span>
+              <span>60</span>
+              <span class="bars"><span></span><span></span><span></span><span></span><span></span></span>
+              <span class="chev">▼</span>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="card chat-shell">
-        <div class="chat-top-line">
-          <div class="gear">⚙</div>
-        </div>
+          <div class="live-player-wrap" id="livePlayerWrap">
+            <div id="vplayer001e157d">
+              <a href="https://volnorez.com/pyl_dorog-fm" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>
+              <script async type="text/javascript" src="https://volnorez.com/plugins/jscode/player_js/001e157d/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22main%22%2C%22style%22%3A%7B%7D%7D"></script>
+            </div>
+          </div>
+        </section>
 
-        <div class="chat-body">
-          <div class="chat-main">
-            <div class="chat-board">
-              <div class="chat-host" id="chat-host">
-                <div class="chat-fallback" id="chat-fallback">
-                  <div class="bubble"><div><b>(((_Viktorriya_!)))</b>: 👏👏👏👏👏👏</div><div class="time">11:03</div></div>
-                  <div class="bubble"><div><b>_🦎_КоСтОчКа_🦎_</b></div><div class="time">11:03</div></div>
-                  <div class="bubble"><div><b>Артурчик</b>: ✗ ✗ 🚭 🤫🤫🤫</div><div class="time">11:04</div></div>
-                  <div class="bubble"><div><b>Артурчик 🚭 дом</b>: Пойду я в магазин</div><div class="time">11:04</div></div>
-                  <div class="bubble"><div><b>(((_Viktoriya_!)))</b>: 🤲🤲🤲🤲🤲</div><div class="time">11:05</div></div>
-                  <div class="bubble"><div><b>Артурчик 🚭 дом</b>: (((_Viktoriya_!))) эта водочкой🤭</div><div class="time">11:05</div></div>
-                  <div class="bubble"><div><b>Артурчик 🚭 дом</b>: (((_Viktoriya_!))) еде за хлебом</div><div class="time">11:05</div></div>
-                  <div class="bubble"><div><b>ШАНСОН</b>: (((_Viktoriya_!))) 🤗</div><div class="time">11:06</div></div>
-                  <div class="bubble"><div><b>ШАНСОН</b>: эту за огненой водицей</div><div class="time">11:07</div></div>
+        <section class="chat-shell">
+          <div class="chat-header">
+            <div class="gear">⚙</div>
+          </div>
+
+          <div class="chat-grid">
+            <div class="messages-col">
+              <div class="messages-frame">
+                <div class="demo-chat" id="demoChat">
+                  <div class="row"><div class="msg"><span class="name">(((_Viktorriya_)))</span>: 👏👏👏👏👏 👏👏</div><div class="time">11:03</div></div>
+                  <div class="row"><div class="msg"><span class="name green">_КоСтОчКа_</span>: 🐸</div><div class="time">11:03</div></div>
+                  <div class="row"><div class="msg"><span class="name">Артурчик</span>: ✘ 🔕 ✘ 🙊🙊🙊</div><div class="time">11:04</div></div>
+                  <div class="row"><div class="msg"><span class="name">Артурчик</span> дом: Пойду я в магазин</div><div class="time">11:04</div></div>
+                  <div class="row"><div class="msg"><span class="name">(((_Viktoriya_)))</span>: 🤭🤭🤭🤭🤭 🤭🤭🤭</div><div class="time">11:05</div></div>
+                  <div class="row"><div class="msg"><span class="name">Артурчик</span> дом: (((_Viktoriya_))) эта водочкой 🤔</div><div class="time">11:05</div></div>
+                  <div class="row"><div class="msg"><span class="name">Артурчик</span> дом: (((_Viktoriya_))) еде за хлебом</div><div class="time">11:05</div></div>
+                  <div class="row"><div class="msg"><span class="name">ШАНСОН</span>: (((_Viktoriya_))) 🫠</div><div class="time">11:06</div></div>
+                  <div class="row"><div class="msg"><span class="name">ШАНСОН</span>: эту за огненой водицей 🤭</div><div class="time">11:07</div></div>
+                  <div class="row"><div class="msg"><span class="name">ШАНСОН</span>: ШАНСОН</div><div class="time">11:08</div></div>
+                </div>
+
+                <div class="live-chat-wrap" id="liveChatWrap">
+                  <div id="volnorez_chat">
+                    <script>var jscode_chat_id = "001e157d";</script>
+                    <script src="https://volnorez.com/application/maxsite/plugins/jscode/js/jscode_chat.js"></script>
+                  </div>
                 </div>
               </div>
+
+              <div class="controls">
+                <div class="controls-left">
+                  <button class="mini-btn" id="toggleChat">Подключить живой чат</button>
+                  <a class="mini-btn" href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;">Открыть станцию</a>
+                </div>
+                <div>Макет в стиле старого чата</div>
+              </div>
             </div>
+
+            <aside class="users-col">
+              <div class="users-frame">
+                <ul class="users-list">
+                  <li class="online"><span class="crown">♛</span> __КоСтОчКа_</li>
+                  <li class="online">☻ Black black cat</li>
+                  <li>◖MarycRL_</li>
+                  <li>__KoKos__</li>
+                  <li>–˜ELLFTE@7~_</li>
+                  <li>¯ƵEBↄJKO_</li>
+                  <li>• Китънктина_сниат...</li>
+                  <li>¯afVut 0r8ATϽ</li>
+                  <li>_ЧΩлчdA__</li>
+                  <li>- .Aәрту_ЛIIG -</li>
+                  <li>~:DennLIn</li>
+                  <li>┐»/ием_</li>
+                  <li>«*Pуп.л’»- -</li>
+                  <li>-~/Лпφез__</li>
+                  <li>⋆• ✶ ˚｡⋆୨</li>
+                </ul>
+                <div class="scrollbar" aria-hidden="true"></div>
+              </div>
+            </aside>
           </div>
 
-          <aside class="users">
-            <div class="users-panel">
-              <div class="user-item host">♛ __КоСтОчКа_♘ ˘</div>
-              <div class="user-item host">🦎 Black black cat</div>
-              <div class="user-item">🎧 _MarycRL_</div>
-              <div class="user-item">_KoKos__</div>
-              <div class="user-item">_~ELLFTE@7~_</div>
-              <div class="user-item">_ƵEВ☾JKO_</div>
-              <div class="user-item">· Китънктина_снят…</div>
-              <div class="user-item">_ƎafVut 0r8ATƟ</div>
-              <div class="user-item">_ЧОпыdA__</div>
-              <div class="user-item">-. Aøπту_ЛIIG -</div>
-              <div class="user-item">~:DennLIn</div>
-              <div class="user-item">⟓»/uem__</div>
-              <div class="user-item">-«Руп.л’»- -</div>
-              <div class="user-item">-«/Лпрез___-</div>
-            </div>
-          </aside>
-        </div>
+          <div class="input-bar">
+            <div class="nick-like">USER_8037</div>
+            <div class="input-like">Напишите сообщение...</div>
+            <button class="send-btn">Отправить</button>
+          </div>
+        </section>
 
-        <div class="chat-bottom">
-          <input class="nick" value="USER_8037" aria-label="Ник" />
-          <input class="message-input" placeholder="Напишите сообщение..." aria-label="Сообщение" />
-          <button class="send-btn" type="button">Отправить</button>
-        </div>
+        <div class="footer-note">Верхний блок и живой чат можно включить кнопками, а сам макет уже подогнан под нужный серый ретро-стиль.</div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
   <script>
-    const STATION_URL = 'https://volnorez.com/pyl_dorog-fm';
-    const JSCODE_ID = '001e157d';
+    const playerWrap = document.getElementById('livePlayerWrap');
+    const liveChatWrap = document.getElementById('liveChatWrap');
+    const demoChat = document.getElementById('demoChat');
+    const togglePlayer = document.getElementById('togglePlayer');
+    const toggleChat = document.getElementById('toggleChat');
 
-    function embedPlayer() {
-      const host = document.getElementById('player-host');
-      if (!host) return;
+    togglePlayer?.addEventListener('click', () => {
+      const show = playerWrap.style.display !== 'block';
+      playerWrap.style.display = show ? 'block' : 'none';
+    });
 
-      const wrap = document.createElement('div');
-      wrap.id = 'vplayer' + JSCODE_ID;
-      wrap.style.width = '100%';
-      wrap.innerHTML = '<a href="' + STATION_URL + '" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>';
-
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://volnorez.com/plugins/jscode/player_js/' + JSCODE_ID + '/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22main%22%2C%22style%22%3A%7B%7D%7D';
-      script.onload = () => {
-        const fallback = document.getElementById('player-fallback');
-        if (fallback) fallback.style.display = 'none';
-      };
-
-      host.appendChild(wrap);
-      host.appendChild(script);
-    }
-
-    function embedChat() {
-      const host = document.getElementById('chat-host');
-      if (!host) return;
-
-      const wrap = document.createElement('div');
-      wrap.id = 'volnorez_chat';
-      wrap.style.width = '100%';
-      wrap.style.height = '100%';
-      wrap.innerHTML = 'Радио «<a href="' + STATION_URL + '" target="_blank" rel="noopener">ПыЛь_ДоРоГ FM</a>»';
-      host.appendChild(wrap);
-
-      window.jscode_chat_id = JSCODE_ID;
-      const script = document.createElement('script');
-      script.src = 'https://volnorez.com/application/maxsite/plugins/jscode/js/jscode_chat.js';
-      script.onload = () => {
-        const fallback = document.getElementById('chat-fallback');
-        if (fallback) fallback.style.display = 'none';
-      };
-      host.appendChild(script);
-    }
-
-    embedPlayer();
-    embedChat();
+    toggleChat?.addEventListener('click', () => {
+      const show = liveChatWrap.style.display !== 'block';
+      liveChatWrap.style.display = show ? 'block' : 'none';
+      demoChat.style.display = show ? 'none' : 'block';
+      toggleChat.textContent = show ? 'Вернуть макет чата' : 'Подключить живой чат';
+    });
   </script>
 </body>
 </html>
