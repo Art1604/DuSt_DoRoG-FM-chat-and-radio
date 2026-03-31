@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://volnorez.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=nHuGqrrE53afhCboXTAoOCFPhWGyftlhTft_zYB_Nu_iK9D08E5OzsKge9okEep56nyH8vaJ3wdNQkI-fTciuR-kCmfbbMNOVu3RFUlNFd2Hshf4s6Fj7Ss4HzxGTkuuQXqTcIB-z58rIvatn5gGWQMX9YcPi1fVykDdDnzMn16UREKhqYWQZgL4mN_MNz7f0GHCXhIabMFLJmU8eN_IuWx8BnPgelFMLUCSdSmbcsA7mB3A8VW1DHdcHlf2T1gDUD1g803sNaxVbVFKtv0inA" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDBmNzA3MjBhOTlmODA4ZTMxZmZjZDUyOCZ0cz00OTMwNDcmcD1mcyZjaWQ9MSZzaWc9NmYyYjk1OTVkNzRjYjYyZTMyY2JiZWNkMTdkNDA1MWQ2YjM1YmNlM2JlOTNjMWU4ODkxMmNmYmFjYzM0NzIxNiZ2PTA"/><style>
+  <style>
     :root{
       --bg:#cfcfcf;
       --panel:#d8d8d8;
@@ -188,26 +188,6 @@
       display:block;
     }
 
-    .status-bar{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
-      padding:6px 10px;
-      font-size:12px;
-      color:#3f3f3f;
-      background:linear-gradient(#efefef,#d7d7d7);
-    }
-
-    .status-badge{
-      padding:3px 8px;
-      background:#ededed;
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #9c9c9c;
-      border-bottom:1px solid #9c9c9c;
-    }
-
     /* closer to Volnorez full chat look */
     .vchat_cont, #volnorez_chat{height:100%}
     .chat_cont{
@@ -232,19 +212,49 @@
       font-family:Arial,Helvetica,sans-serif !important;
     }
     .chat_msg:hover{background-color:rgb(228,230,237) !important}
-.chat_msg_date span,
-    .chat_nick_input,
-    .chat_common_tab.selected,
-    .chat_private_tabs>div.selected,
-    .chat_users_container,
-    .chat_message_input{
-      background-color:rgb(228,230,237) !important;
-    }
     .chat_usr.chat_ut_owner,
     .chat_usr.chat_ut_rj,
     .chat_mynick,
     .chat_msg_date span{
       color:rgb(89,127,156) !important;
+    }
+
+    /* smile fix: keep them in one line, not in a column */
+    #volnorez_chat img{
+      image-rendering:auto !important;
+    }
+
+    #volnorez_chat .chat_msg .chat_msg_text,
+    #volnorez_chat .chat_msg_text{
+      white-space:normal !important;
+    }
+
+    #volnorez_chat .chat_msg .chat_msg_text img,
+    #volnorez_chat img[src*="smile"],
+    #volnorez_chat img[src*="smiley"],
+    #volnorez_chat img[src*="/plugins/wchat/"],
+    #volnorez_chat img[src*="/static/smileys/"]{
+      display:inline-block !important;
+      vertical-align:middle !important;
+      float:none !important;
+      clear:none !important;
+      position:static !important;
+      width:auto !important;
+      height:auto !important;
+      max-width:none !important;
+      max-height:none !important;
+      transform:none !important;
+      margin:0 1px !important;
+    }
+
+    #volnorez_chat [class*="smile_"],
+    #volnorez_chat [class*="smile-"]{
+      display:inline-block !important;
+      float:none !important;
+      clear:none !important;
+      vertical-align:middle !important;
+      transform:none !important;
+      margin:0 1px !important;
     }
 
     .fallback{
@@ -280,25 +290,6 @@
       .menu-group{width:100%}
       .brand{width:100%;text-align:center}
     }
-  
-    /* gentle smile fix: preserve panel, only improve smile rendering */
-    #volnorez_chat img{
-      image-rendering:auto !important;
-    }
-    #volnorez_chat .chat_msg .chat_msg_text img,
-    #volnorez_chat img[src*="smile"],
-    #volnorez_chat img[src*="smiley"],
-    #volnorez_chat img[src*="/plugins/wchat/"],
-    #volnorez_chat img[src*="/static/smileys/"]{
-      vertical-align:middle !important;
-      width:auto !important;
-      height:auto !important;
-      max-width:none !important;
-      max-height:none !important;
-      transform:none !important;
-      margin:0 1px !important;
-    }
-
   </style>
 
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
@@ -345,10 +336,6 @@
       </div>
 
       <div class="chat-shell bevel">
-        <div class="status-bar bevel">
-          <div>Чат станции Volnorez</div>
-          <div class="status-badge">Смайлы и оформление тянутся с Volnorez</div>
-        </div>
         <div class="chat-frame">
           <div
             id="volnorez_chat"
@@ -414,16 +401,6 @@
             node.nodeValue = '';
           }
         });
-
-        if (root.querySelectorAll) {
-          root.querySelectorAll('input, textarea').forEach((el) => {
-            const val = (el.value || '').trim().toLowerCase();
-            if (GARBAGE_TEXTS.has(val)) el.value = '';
-
-            const ph = (el.getAttribute('placeholder') || '').trim().toLowerCase();
-            if (GARBAGE_TEXTS.has(ph)) el.setAttribute('placeholder', '');
-          });
-        }
       }
 
       function runAntiTextFix() {
@@ -447,7 +424,7 @@
                 const parent = node.parentElement;
                 if (parent) parent.style.display = 'none';
               }
-              shouldRun = true
+              shouldRun = true;
             } else if (node.nodeType === Node.ELEMENT_NODE) {
               shouldRun = true;
             }
@@ -463,7 +440,6 @@
       });
     })();
   </script>
-
 
   <script>
     (function () {
@@ -538,6 +514,5 @@
       });
     })();
   </script>
-
 </body>
 </html>
