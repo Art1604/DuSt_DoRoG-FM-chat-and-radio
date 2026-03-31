@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>ПыЛь_ДоРоГ FM — Радио и чат</title>
 
-  <style>
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=fmWRoC1flCV-63FzbQMMx5aPi3bZdAYXQkmEfSzYL46c7WNkIVWA_TAvXOADTGkmhQZT8-0jaOkdtDFAkU1JuGI2P7QVDgmqpI_T8hJ0sZJNQLsPqNIk9JACQgl3eH8ZvqUi-3A_0tWnvvSirrrpeGVl5U9IpetXoq7QOU51FZf8a2yhD61CCp-ppJw2-6iVlNX8heC_y-a_FFxQ1KbEZsOd7ijRqs8mQjdtsLN1G-dAqTFfDHpQAiaLWLeNbmb8hvQ_Pxxkfg5bZricU8mBSg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDgyYzA3MjQzOGQwMWQ1MWUwZjhlYjgyYSZ0cz00OTMwNDYmcD1mcyZjaWQ9MSZzaWc9ZWQzMWU4ZDgxNzBiZjRiNGI2ZjlhNDNkMjI4OWEzNGFlZjUwMGY5YmQyZTI5YmU5OGRkY2MyZTdiZDY4ZTIzYiZ2PTA"/><style>
     :root{
-      --bg:#d7d7d7;
+      --bg:#d8d8d8;
       --shell:#e7e7e7;
-      --panel:#d2d2d2;
-      --panel2:#c7c7c7;
+      --frame:#dddddd;
+      --panel:#dadada;
       --line-dark:#8f8f8f;
-      --line-mid:#b8b8b8;
-      --line-light:#f7f7f7;
-      --text:#222;
-      --text-soft:#4d4d4d;
-      --accent:#4a83b6;
-      --green:#3fbf07;
+      --line-mid:#bbbbbb;
+      --line-light:#f8f8f8;
+      --text:#252c36;
+      --blue1:#b6cfdf;
+      --blue2:#8eaac0;
+      --green:#39b300;
     }
 
     *{box-sizing:border-box}
@@ -25,165 +25,151 @@
     html,body{
       margin:0;
       padding:0;
+      min-height:100%;
       background:var(--bg);
       color:var(--text);
       font-family:Tahoma, Arial, sans-serif;
-      min-height:100%;
     }
 
     body{
-      padding:18px;
+      padding:18px 14px;
     }
 
     .app{
       max-width:1280px;
       margin:0 auto;
-      background:linear-gradient(#efefef,#dddddd);
-      border-radius:22px;
-      border:1px solid #bdbdbd;
-      box-shadow:
-        0 1px 0 #fff inset,
-        0 18px 40px rgba(0,0,0,.18);
-      padding:26px 24px 18px;
     }
 
     .title{
-      text-align:center;
-      font-size:34px;
-      font-weight:800;
-      letter-spacing:.3px;
-      color:#2f3540;
       margin:0 0 18px;
+      text-align:center;
+      font-size:36px;
+      font-weight:800;
+      letter-spacing:.2px;
+      color:#273245;
+      text-shadow:0 1px 0 #fff;
     }
 
-    .frame{
-      background:#dfdfdf;
-      border-radius:14px;
-      border:1px solid #bbbbbb;
+    .outer{
+      background:linear-gradient(#e9e9e9,#dcdcdc);
+      border:1px solid #bdbdbd;
+      border-radius:18px;
       box-shadow:
-        0 1px 0 #fdfdfd inset,
-        0 -1px 0 #d0d0d0 inset;
-      padding:18px;
+        inset 0 1px 0 rgba(255,255,255,.85),
+        0 14px 28px rgba(0,0,0,.08);
+      padding:16px;
+    }
+
+    .inner{
+      background:linear-gradient(#e3e3e3,#d6d6d6);
+      border:1px solid #bbbbbb;
+      border-radius:14px;
+      padding:14px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.85);
     }
 
     .player-panel{
-      background:linear-gradient(#f1f1f1,#e3e3e3);
+      background:linear-gradient(#efefef,#dfdfdf);
+      border:1px solid #b2b2b2;
       border-radius:12px;
-      border:1px solid #b7b7b7;
-      box-shadow:
-        0 1px 0 #fff inset,
-        0 -1px 0 #cfcfcf inset;
-      padding:12px 14px;
+      padding:10px 12px;
       margin-bottom:16px;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.95),
+        inset 0 -1px 0 rgba(0,0,0,.05);
       overflow:hidden;
     }
 
     .chat-shell{
       position:relative;
-      background:#d5d5d5;
-      border-radius:12px;
+      background:#d7d7d7;
       border:1px solid #b5b5b5;
-      padding:0;
+      border-radius:12px;
+      min-height:630px;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.9),
+        0 2px 8px rgba(0,0,0,.05);
       overflow:hidden;
-      min-height:620px;
     }
 
-    .chat-shell::before{
-      content:"";
-      display:block;
-      height:12px;
-      background:linear-gradient(#b8cfe0,#8eacc4);
-      border-bottom:1px solid #7e97ab;
-      box-shadow:0 1px 0 rgba(255,255,255,.65) inset;
+    .chat-top{
+      height:13px;
+      background:linear-gradient(var(--blue1),var(--blue2));
+      border-bottom:1px solid #7d97ac;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
     }
 
     .gear{
       position:absolute;
-      top:5px;
+      top:4px;
       left:8px;
-      z-index:5;
       width:24px;
       height:24px;
       border-radius:6px;
-      background:linear-gradient(#6fa3cf,#4c84b6);
-      border:1px solid #3d6e98;
+      background:linear-gradient(#6ea2ce,#4d84b6);
+      border:1px solid #3d6f99;
       color:#fff;
       font-size:15px;
+      font-weight:700;
       line-height:22px;
       text-align:center;
-      box-shadow:0 1px 0 rgba(255,255,255,.35) inset;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
       user-select:none;
       pointer-events:none;
+      z-index:3;
     }
 
     .chat-body{
-      background:#efefef;
-      min-height:608px;
-      padding:10px 10px 12px;
+      padding:10px;
+      background:#ececec;
+      min-height:617px;
     }
 
     #volnorez_chat{
-      width:100%;
-      min-height:586px;
       display:block;
-      background:#efefef;
+      width:100%;
+      min-height:598px;
+      background:#ececec;
     }
 
-    /* Мягкая подстройка внешнего embed */
+    /* Базовая типографика внутри embed */
     #volnorez_chat,
     #volnorez_chat *{
       font-family:Tahoma, Arial, sans-serif !important;
     }
 
-    /* Улучшение смайлов и мемов */
+    /* Улучшение рендера смайлов и мемов */
+    #volnorez_chat img{
+      image-rendering:auto !important;
+      vertical-align:middle !important;
+    }
+
     #volnorez_chat img[src*="smile"],
     #volnorez_chat img[src*="smiley"],
-    #volnorez_chat [class*="smile_"] img,
-    #volnorez_chat .smile,
-    #volnorez_chat [class*="smile_"]{
+    #volnorez_chat img[src*="/plugins/wchat/"],
+    #volnorez_chat [class*="smile_"] img{
       max-width:none !important;
       max-height:none !important;
     }
 
-    #volnorez_chat img[src*="smile"],
-    #volnorez_chat img[src*="smiley"]{
-      width:auto !important;
-      height:auto !important;
+    /* Если смайлы приходят как background-image через class smile_* */
+    #volnorez_chat [class*="smile_"]{
+      display:inline-block !important;
       vertical-align:middle !important;
-      margin:0 3px !important;
-      image-rendering:auto;
+      transform:scale(1.16);
+      transform-origin:left center;
+      margin:0 2px;
     }
 
-    #volnorez_chat img[src*="mem"],
-    #volnorez_chat img[src*="gif"]{
-      max-width:180px !important;
-      height:auto !important;
-    }
-
-    /* Мобильная адаптация */
     @media (max-width: 900px){
       body{padding:8px}
-      .app{
-        border-radius:14px;
-        padding:14px 12px 12px;
-      }
-      .title{
-        font-size:26px;
-        margin-bottom:12px;
-      }
-      .frame{
-        padding:10px;
-      }
-      .player-panel{
-        padding:10px;
-        margin-bottom:10px;
-      }
-      .chat-body{
-        padding:8px;
-      }
-      #volnorez_chat{
-        min-height:520px;
-      }
+      .title{font-size:28px; margin-bottom:12px}
+      .outer{padding:10px; border-radius:14px}
+      .inner{padding:10px; border-radius:10px}
+      .player-panel{margin-bottom:10px}
+      .chat-shell{min-height:560px}
+      .chat-body{min-height:547px; padding:8px}
+      #volnorez_chat{min-height:530px}
     }
   </style>
 </head>
@@ -192,9 +178,7 @@
   <script>
     (async () => {
       try {
-        if (window.vkBridge) {
-          await vkBridge.send('VKWebAppInit');
-        }
+        if (window.vkBridge) await vkBridge.send('VKWebAppInit');
       } catch (e) {}
     })();
   </script>
@@ -202,28 +186,31 @@
   <div class="app">
     <h1 class="title">ПыЛь_ДоРоГ FM</h1>
 
-    <div class="frame">
-      <div class="player-panel">
-        <div id="vplayer001e157d">
-          <a href="https://volnorez.com/pyl_dorog-fm" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>
-          <script
-            async
-            type="text/javascript"
-            src="https://volnorez.com/plugins/jscode/player_js/001e157d/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22skin2%22%2C%22style%22%3A%7B%22bcolor%22%3A%22bdbdbd%22%2C%22hcolor%22%3A%22f4f4f4%22%2C%22fcolor%22%3A%225f6670%22%2C%22text1color%22%3A%22373d45%22%2C%22text2color%22%3A%2249515d%22%2C%22text3color%22%3A%2248515d%22%2C%22btncolor%22%3A%2257606c%22%2C%22bgcolor%22%3A%22dadada%22%2C%22line1color%22%3A%22ffffff%22%2C%22line2color%22%3A%228b8b8b%22%2C%22slidercolor%22%3A%2257606c%22%7D%7D">
-          </script>
-        </div>
-      </div>
-
-      <div class="chat-shell">
-        <div class="gear">⚙</div>
-        <div class="chat-body">
-          <div
-            id="volnorez_chat"
-            data-code="001e157d"
-            data-skin="skin_4"
-            data-skin-params="'bg_clr':'222,222,222','panel_clr':'216,216,216','ib_clr':'250,250,250','msgbg_clr':'238,238,238','omsgbg_clr':'229,229,229','txt_clr':'18,18,18','b_clr':'145,145,145','icon_clr':'120,120,120','label_clr':'60,61,61','dj_clr':'63,191,7'">
+    <div class="outer">
+      <div class="inner">
+        <div class="player-panel">
+          <div id="vplayer001e157d">
+            <a href="https://volnorez.com/pyl_dorog-fm" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>
+            <script
+              async
+              type="text/javascript"
+              src="https://volnorez.com/plugins/jscode/player_js/001e157d/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22skin2%22%2C%22style%22%3A%7B%22bcolor%22%3A%22bdbdbd%22%2C%22hcolor%22%3A%22f4f4f4%22%2C%22fcolor%22%3A%225f6670%22%2C%22text1color%22%3A%22373d45%22%2C%22text2color%22%3A%2249515d%22%2C%22text3color%22%3A%2248515d%22%2C%22btncolor%22%3A%2257606c%22%2C%22bgcolor%22%3A%22dadada%22%2C%22line1color%22%3A%22ffffff%22%2C%22line2color%22%3A%228b8b8b%22%2C%22slidercolor%22%3A%2257606c%22%7D%7D">
+            </script>
           </div>
-          <script async src="https://volnorez.com/plugins/jscode/chat_js"></script>
+        </div>
+
+        <div class="chat-shell">
+          <div class="chat-top"></div>
+          <div class="gear">⚙</div>
+          <div class="chat-body">
+            <div
+              id="volnorez_chat"
+              data-code="001e157d"
+              data-skin="skin_4"
+              data-skin-params="'bg_clr':'222,222,222','panel_clr':'216,216,216','ib_clr':'250,250,250','msgbg_clr':'238,238,238','omsgbg_clr':'229,229,229','txt_clr':'18,18,18','b_clr':'145,145,145','icon_clr':'120,120,120','label_clr':'60,61,61','dj_clr':'63,191,7'">
+            </div>
+            <script async src="https://volnorez.com/plugins/jscode/chat_js"></script>
+          </div>
         </div>
       </div>
     </div>
@@ -231,60 +218,98 @@
 
   <script>
     (function () {
-      function isStandaloneTestText(text) {
-        return !!text && text.trim().toLowerCase() === 'test';
+      const VOLNOREZ_HOST = 'https://volnorez.com';
+      const GARBAGE_TEXTS = new Set(['test', 'test1']);
+
+      function normalizeUrl(url) {
+        if (!url) return url;
+        if (url.startsWith('//')) return 'https:' + url;
+        if (url.startsWith('/')) return VOLNOREZ_HOST + url;
+        return url;
       }
 
-      function hideTestNode(node) {
-        if (!node) return;
-
-        const parent = node.parentElement;
-        if (!parent) return;
-
-        const text = (node.nodeValue || '').trim().toLowerCase();
-        if (text !== 'test') return;
-
-        const parentText = (parent.textContent || '').trim().toLowerCase();
-
-        if (parentText === 'test') {
-          parent.style.display = 'none';
-          return;
-        }
-
-        node.nodeValue = '';
+      function isGarbageText(text) {
+        if (!text) return false;
+        return GARBAGE_TEXTS.has(text.trim().toLowerCase());
       }
 
-      function cleanTests(root = document.body) {
+      function cleanGarbage(root = document.body) {
         if (!root) return;
 
-        const walker = document.createTreeWalker(
-          root,
-          NodeFilter.SHOW_TEXT,
-          null
-        );
-
-        const nodesToClean = [];
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+        const textNodes = [];
 
         while (walker.nextNode()) {
           const node = walker.currentNode;
-          if (isStandaloneTestText(node.nodeValue)) {
-            nodesToClean.push(node);
+          if (isGarbageText(node.nodeValue)) {
+            textNodes.push(node);
           }
         }
 
-        nodesToClean.forEach(hideTestNode);
+        textNodes.forEach((node) => {
+          const parent = node.parentElement;
+          if (!parent) return;
+
+          const parentText = (parent.textContent || '').trim().toLowerCase();
+
+          if (GARBAGE_TEXTS.has(parentText)) {
+            parent.style.display = 'none';
+          } else {
+            node.nodeValue = '';
+          }
+        });
+
+        root.querySelectorAll?.('input, textarea').forEach((el) => {
+          const val = (el.value || '').trim().toLowerCase();
+          if (GARBAGE_TEXTS.has(val)) el.value = '';
+          const ph = (el.getAttribute('placeholder') || '').trim().toLowerCase();
+          if (GARBAGE_TEXTS.has(ph)) el.setAttribute('placeholder', '');
+        });
       }
 
-      function improveVolnorezSmiles(root = document) {
+      function fixSmileImages() {
         const chatRoot = document.querySelector('#volnorez_chat');
         if (!chatRoot) return;
 
         chatRoot.querySelectorAll('img').forEach((img) => {
-          const src = (img.getAttribute('src') || '').toLowerCase();
           const cls = (img.className || '').toLowerCase();
+          let src = img.getAttribute('src') || '';
+          const dataSrc = img.getAttribute('data-src') || '';
+          const srcset = img.getAttribute('srcset') || '';
 
-          const isSmile = src.includes('smile') || src.includes('smiley') || cls.includes('smile_');
-          const isMeme = src.includes('mem') || src.includes('gif');
+          if (!src && dataSrc) {
+            src = dataSrc;
+          }
+
+          if (src) img.setAttribute('src', normalizeUrl(src));
+          if (srcset) {
+            const fixedSrcset = srcset
+              .split(',')
+              .map(part => {
+                const trimmed = part.trim();
+                const spaceIdx = trimmed.indexOf(' ');
+                if (spaceIdx === -1) return normalizeUrl(trimmed);
+                const url = trimmed.slice(0, spaceIdx);
+                const size = trimmed.slice(spaceIdx + 1);
+                return normalizeUrl(url) + ' ' + size;
+              })
+              .join(', ');
+            img.setAttribute('srcset', fixedSrcset);
+          }
+
+          const finalSrc = (img.getAttribute('src') || '').toLowerCase();
+
+          const isSmile =
+            finalSrc.includes('smile') ||
+            finalSrc.includes('smiley') ||
+            finalSrc.includes('/plugins/wchat/') ||
+            finalSrc.includes('/static/smileys/') ||
+            cls.includes('smile_');
+
+          const isMeme =
+            finalSrc.includes('mem') ||
+            finalSrc.includes('gif') ||
+            cls.includes('mem');
 
           if (isSmile) {
             img.style.width = 'auto';
@@ -292,41 +317,83 @@
             img.style.maxWidth = 'none';
             img.style.maxHeight = 'none';
             img.style.verticalAlign = 'middle';
-            img.style.transform = 'scale(1.3)';
-            img.style.transformOrigin = 'left center';
             img.style.margin = '0 3px';
+            img.style.transform = 'scale(1.22)';
+            img.style.transformOrigin = 'left center';
           }
 
           if (isMeme) {
             img.style.maxWidth = '180px';
             img.style.height = 'auto';
+            img.style.display = 'inline-block';
+          }
+
+          if (!img.dataset.fixBound) {
+            img.dataset.fixBound = '1';
+            img.addEventListener('error', function onError() {
+              const current = img.getAttribute('src') || '';
+              const fixed = normalizeUrl(current);
+              if (fixed && fixed !== current) {
+                img.src = fixed;
+              } else {
+                img.style.display = 'none';
+              }
+            });
           }
         });
       }
 
-      function runAllFixes(root) {
-        cleanTests(root || document.body);
-        improveVolnorezSmiles(root || document);
+      function boostSmileBackgrounds() {
+        const chatRoot = document.querySelector('#volnorez_chat');
+        if (!chatRoot) return;
+
+        chatRoot.querySelectorAll('[class*="smile_"]').forEach((el) => {
+          const style = window.getComputedStyle(el);
+          const bg = style.backgroundImage || '';
+          if (bg && bg !== 'none') {
+            el.style.display = 'inline-block';
+            el.style.verticalAlign = 'middle';
+            el.style.transform = 'scale(1.16)';
+            el.style.transformOrigin = 'left center';
+            el.style.margin = '0 2px';
+          }
+        });
       }
 
-      window.addEventListener('load', function () {
-        runAllFixes(document.body);
-        setTimeout(() => runAllFixes(document.body), 1200);
-        setTimeout(() => runAllFixes(document.body), 2500);
-      });
+      function runFixes(root) {
+        cleanGarbage(root || document.body);
+        fixSmileImages();
+        boostSmileBackgrounds();
+      }
 
-      const observer = new MutationObserver(function (mutations) {
+      function scheduleFixes() {
+        runFixes(document.body);
+        setTimeout(() => runFixes(document.body), 900);
+        setTimeout(() => runFixes(document.body), 1800);
+        setTimeout(() => runFixes(document.body), 3200);
+      }
+
+      window.addEventListener('load', scheduleFixes);
+      document.addEventListener('DOMContentLoaded', scheduleFixes);
+
+      const observer = new MutationObserver((mutations) => {
+        let shouldRun = false;
+
         for (const mutation of mutations) {
-          mutation.addedNodes.forEach((added) => {
-            if (added.nodeType === Node.TEXT_NODE) {
-              if (isStandaloneTestText(added.nodeValue)) {
-                hideTestNode(added);
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.TEXT_NODE) {
+              if (isGarbageText(node.nodeValue)) {
+                const parent = node.parentElement;
+                if (parent) parent.style.display = 'none';
               }
-            } else if (added.nodeType === Node.ELEMENT_NODE) {
-              runAllFixes(added);
+              shouldRun = true;
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+              shouldRun = true;
             }
           });
         }
+
+        if (shouldRun) runFixes(document.body);
       });
 
       observer.observe(document.body, {
