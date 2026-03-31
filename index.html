@@ -3,27 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>ПыЛь ДоРоГ FM - Радио и чат</title>
-  <meta name="theme-color" content="#edeef0" />
+  <title>ПыЛь_ДоРоГ FM — Радио и чат</title>
+  <meta name="theme-color" content="#c9c9c9" />
   <link rel="preconnect" href="https://volnorez.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xPNfrwNS3NT0sgO73MFXntWJjCUMQgv1EM0aKwKo0gA5KmSPyZT_jSFflEoA7PNrB1jsZC4ir_k2pa25EQoCn6n-3lRkErdg1If8BnVMngGptQXt4IVxncVzSDjDTRcIUfxLVjS1dS9b5BRJ9gBzL0HMHrHD6PadpmOcqTUJZNFFtC4dIXgJkGtreccWi7n52rivoxznG_EotG8WUIkSaS_3WbXahow5EbWnKyqsqNziD4MaxpmFscTqyi-DRmP3RhYzVwLYEuCqJ3gUwq2oLQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDZhMzA3MjQ2YjM0MDRmZDc3MGM1MzAxZCZ0cz00OTMwNDcmcD1mcyZjaWQ9MSZzaWc9OGMwZGIyYzZkZjM0OTExOGZmMWNiYzAyYjRmMGZjNTc0OGMzZDIxMTNlMjk5ZDI0MTdkMjdjNGJlNDhiMTFmNyZ2PTA"/><style>
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=nHuGqrrE53afhCboXTAoOCFPhWGyftlhTft_zYB_Nu_iK9D08E5OzsKge9okEep56nyH8vaJ3wdNQkI-fTciuR-kCmfbbMNOVu3RFUlNFd2Hshf4s6Fj7Ss4HzxGTkuuQXqTcIB-z58rIvatn5gGWQMX9YcPi1fVykDdDnzMn16UREKhqYWQZgL4mN_MNz7f0GHCXhIabMFLJmU8eN_IuWx8BnPgelFMLUCSdSmbcsA7mB3A8VW1DHdcHlf2T1gDUD1g803sNaxVbVFKtv0inA" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDBmNzA3MjBhOTlmODA4ZTMxZmZjZDUyOCZ0cz00OTMwNDcmcD1mcyZjaWQ9MSZzaWc9NmYyYjk1OTVkNzRjYjYyZTMyY2JiZWNkMTdkNDA1MWQ2YjM1YmNlM2JlOTNjMWU4ODkxMmNmYmFjYzM0NzIxNiZ2PTA"/><style>
     :root{
-      --vk-bg:#edeef0;
-      --vk-card:#ffffff;
-      --vk-card-2:#f0f2f5;
-      --vk-border:#dce1e6;
-      --vk-border-2:#e7e8ec;
-      --vk-text:#000000;
-      --vk-text-2:#818c99;
-      --vk-link:#2a5885;
-      --vk-accent:#447bba;
-      --vk-radius:12px;
-      --vk-shadow:0 0 0 1px var(--vk-border);
-      --header-h:62px;
-      --layout-w:960px;
-
+      --bg:#cfcfcf;
+      --panel:#d8d8d8;
+      --panel-2:#ececec;
+      --edge-dark:#8a8a8a;
+      --edge-mid:#adadad;
+      --edge-light:#ffffff;
+      --text:#222;
+      --blue:#597f9c;
       --chat-bg:#b8cfe3;
       --chat-panel:#e4e6ed;
       --chat-border:#f7f2f7;
@@ -33,167 +27,188 @@
     html,body{height:100%}
     body{
       margin:0;
-      background:var(--vk-bg);
-      color:var(--vk-text);
-      font:13px/1.154 -apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,Tahoma,sans-serif;
-      -webkit-font-smoothing:subpixel-antialiased;
-      -moz-osx-font-smoothing:auto;
+      background:linear-gradient(145deg,#e4e4e4,#bdbdbd);
+      color:var(--text);
+      font-family:Arial,Helvetica,sans-serif;
       overflow:hidden;
     }
 
-    a{
-      color:var(--vk-link);
-      text-decoration:none;
-      cursor:pointer;
-    }
-    a:hover{text-decoration:underline}
-
-    .page{
+    .app{
       height:100%;
-      max-width:var(--layout-w);
-      margin:0 auto;
-      padding:16px 15px;
-      display:grid;
-      grid-template-rows:auto 1fr;
-      gap:0;
+      display:flex;
+      flex-direction:column;
+      padding:8px;
+      gap:8px;
     }
 
-    .page_block{
-      position:relative;
-      background:var(--vk-card);
-      border-radius:var(--vk-radius);
-      box-shadow:var(--vk-shadow);
+    .bevel{
+      background:var(--panel);
+      border-top:1px solid var(--edge-light);
+      border-left:1px solid var(--edge-light);
+      border-right:1px solid var(--edge-dark);
+      border-bottom:1px solid var(--edge-dark);
+      box-shadow:inset 1px 1px 0 rgba(255,255,255,.5), inset -1px -1px 0 rgba(0,0,0,.08);
     }
 
-    .apps_options_bar{
-      height:var(--header-h);
-      line-height:var(--header-h);
-      padding:0 20px;
-      display:table;
-      width:100%;
-      white-space:nowrap;
-      border-radius:var(--vk-radius) var(--vk-radius) 0 0;
-      background:var(--vk-card);
-      border-bottom:none;
-      box-shadow:none;
-    }
-
-    .apps_options_bar_left{
-      position:relative;
-      display:table-cell;
-      width:100%;
-      vertical-align:middle;
-    }
-
-    .app_summary_name{
-      display:inline-block;
-      max-width:100%;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      vertical-align:top;
-      font-size:15px;
-      font-weight:600;
-      color:var(--vk-text);
-      line-height:var(--header-h);
-    }
-
-    .apps_options_bar_right{
-      display:table-cell;
-      width:1%;
-      color:var(--vk-text-2);
-      letter-spacing:.24px;
-      vertical-align:middle;
-    }
-
-    .apps_divided_links{
-      white-space:nowrap;
-      display:inline-flex;
+    .top-menu{
+      display:flex;
+      gap:10px;
+      padding:8px;
       align-items:center;
-      gap:0;
+      min-height:46px;
+      flex-wrap:wrap;
+      background:linear-gradient(#f0f0f0,#cfcfcf);
     }
 
-    .apps_divided_links .divider{
-      display:inline-block;
-      width:5px;
-      margin:0 5px;
-      color:transparent;
-      position:relative;
-    }
-    .apps_divided_links .divider::before{
-      content:"\00b7";
-      color:#99a2ad;
-      position:relative;
-      top:-1px;
-      left:-1px;
+    .brand{
+      font-weight:700;
+      padding:7px 12px;
+      letter-spacing:.2px;
+      background:linear-gradient(#f5f5f5,#d7d7d7);
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #8d8d8d;
+      border-bottom:1px solid #8d8d8d;
+      white-space:nowrap;
     }
 
-    .apps_main{
+    .menu-group{position:relative}
+    .menu-button{
+      appearance:none;
+      border:0;
+      cursor:pointer;
+      padding:8px 34px 8px 12px;
+      min-width:166px;
+      text-align:left;
+      font-size:14px;
+      color:#222;
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #8d8d8d;
+      border-bottom:1px solid #8d8d8d;
+      background:linear-gradient(#efefef,#d2d2d2);
       position:relative;
-      padding:0;
-      text-align:center;
-      background:var(--vk-card);
-      border-radius:0 0 var(--vk-radius) var(--vk-radius);
+    }
+    .menu-button::after{
+      content:'▼';
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#444;
+    }
+    .menu-button:hover{background:linear-gradient(#f6f6f6,#dbdbdb)}
+
+    .dropdown{
+      display:none;
+      position:absolute;
+      top:calc(100% + 4px);
+      left:0;
+      min-width:240px;
+      z-index:20;
+      padding:6px;
+      background:#dbdbdb;
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #8d8d8d;
+      border-bottom:1px solid #8d8d8d;
+      box-shadow:3px 3px 10px rgba(0,0,0,.18);
+    }
+    .menu-group:hover .dropdown,
+    .menu-group:focus-within .dropdown{display:block}
+
+    .menu-item{
+      display:block;
+      width:100%;
+      border:0;
+      background:transparent;
+      cursor:pointer;
+      text-align:left;
+      padding:8px 10px;
+      border-radius:4px;
+      color:#222;
+      font-size:14px;
+      text-decoration:none;
+    }
+    .menu-item:hover{background:linear-gradient(145deg,#e0e0e0,#f0f0f0)}
+
+    .layout{
       min-height:0;
-      display:grid;
-      grid-template-rows:1fr;
-    }
-
-    .content{
-      min-height:0;
-      padding:16px;
+      flex:1;
       display:grid;
       grid-template-rows:auto 1fr;
-      gap:16px;
+      gap:8px;
     }
 
-    .player-wrap,
-    .chat-wrap{
-      background:var(--vk-card-2);
-      border:1px solid var(--vk-border-2);
-      border-radius:10px;
-      padding:12px;
+    .player-panel{
+      padding:10px;
+      background:linear-gradient(#efefef,#d6d6d6);
     }
 
-    .player-label{
-      margin:0 0 10px;
+    .player-title{
       font-size:13px;
-      font-weight:500;
-      color:var(--vk-text-2);
-      text-align:left;
+      font-weight:700;
+      margin-bottom:8px;
+      color:#3b3b3b;
     }
 
     .player-box{
-      background:#f7f8fa;
-      border:1px solid var(--vk-border);
-      border-radius:10px;
       padding:8px;
-      overflow:hidden;
+      background:#e5e5e5;
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #8f8f8f;
+      border-bottom:1px solid #8f8f8f;
     }
 
-    .chat-wrap{
+    .chat-shell{
       min-height:0;
-      display:grid;
-      grid-template-rows:1fr;
+      padding:8px;
+      background:linear-gradient(#dadada,#c7c7c7);
     }
 
     .chat-frame{
-      min-height:0;
+      height:100%;
+      min-height:420px;
       position:relative;
-      border-radius:10px;
-      overflow:hidden;
-      border:1px solid var(--vk-border);
+      padding:8px;
       background:#d6d6d6;
-      text-align:left;
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #8a8a8a;
+      border-bottom:1px solid #8a8a8a;
+      overflow:hidden;
     }
 
     #volnorez_chat{
       width:100%;
       height:100%;
-      min-height:500px;
+      min-height:404px;
       display:block;
     }
 
-    /* Сохраняем удачный рендер смайлов/сообщений, не трогая внутренние панели */
+    .status-bar{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      padding:6px 10px;
+      font-size:12px;
+      color:#3f3f3f;
+      background:linear-gradient(#efefef,#d7d7d7);
+    }
+
+    .status-badge{
+      padding:3px 8px;
+      background:#ededed;
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #9c9c9c;
+      border-bottom:1px solid #9c9c9c;
+    }
+
+    /* closer to Volnorez full chat look */
     .vchat_cont, #volnorez_chat{height:100%}
     .chat_cont{
       font-family:Arial,Helvetica,sans-serif !important;
@@ -208,16 +223,22 @@
       border:1px solid rgb(247,242,247) !important;
       box-shadow:0 -1px 4px 0 rgba(0,0,0,.2) !important;
     }
-    .chat_history_container{
+    .chat_history_container,
+    .chat_settings,
+    .chat_smileys,
+    .chat_private_tabs>div,
+    .chat_tabs>div,
+    .chat_bottom{
       font-family:Arial,Helvetica,sans-serif !important;
     }
     .chat_msg:hover{background-color:rgb(228,230,237) !important}
-    .chat_msg .chat_msg_text img{
-      vertical-align:bottom !important;
-      transform:scale(.9);
-      margin-left:-2px;
-      margin-right:-2px;
-      cursor:pointer;
+.chat_msg_date span,
+    .chat_nick_input,
+    .chat_common_tab.selected,
+    .chat_private_tabs>div.selected,
+    .chat_users_container,
+    .chat_message_input{
+      background-color:rgb(228,230,237) !important;
     }
     .chat_usr.chat_ut_owner,
     .chat_usr.chat_ut_rj,
@@ -226,90 +247,58 @@
       color:rgb(89,127,156) !important;
     }
 
-    .apps_options_bar_bottom{
-      border-top:1px solid var(--vk-border-2);
-      padding:14px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      border-radius:0 0 var(--vk-radius) var(--vk-radius);
-      color:var(--vk-text-2);
-      font-size:13px;
-      background:var(--vk-card);
-    }
-
-    .apps_options_bar_bottom .apps_divided_links{
-      flex-wrap:wrap;
-      white-space:normal;
-    }
-
     .fallback{
       position:absolute;
-      inset:0;
+      inset:8px;
       display:none;
       place-items:center;
       text-align:center;
       padding:24px;
-      background:linear-gradient(#ffffff,#f5f6f8);
+      background:linear-gradient(#d8d8d8,#c6c6c6);
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #8a8a8a;
+      border-bottom:1px solid #8a8a8a;
     }
     .fallback.show{display:grid}
     .fallback-inner{
       max-width:520px;
       padding:18px;
-      border-radius:10px;
-      background:#fff;
-      box-shadow:var(--vk-shadow);
+      background:#efefef;
+      border-top:1px solid #fff;
+      border-left:1px solid #fff;
+      border-right:1px solid #8f8f8f;
+      border-bottom:1px solid #8f8f8f;
     }
-    .fallback h3{
-      margin:0 0 10px;
-      font-size:16px;
-      line-height:1.25;
+    .fallback a{color:#234d72}
+
+    @media (max-width: 720px){
+      body{overflow:auto}
+      .app{height:auto;min-height:100%}
+      .layout{grid-template-rows:auto minmax(560px,1fr)}
+      .menu-button{min-width:unset;width:100%}
+      .menu-group{width:100%}
+      .brand{width:100%;text-align:center}
     }
-    .fallback p{
-      margin:0 0 10px;
-      color:var(--vk-text-2);
-      line-height:1.4;
+  
+    /* gentle smile fix: preserve panel, only improve smile rendering */
+    #volnorez_chat img{
+      image-rendering:auto !important;
+    }
+    #volnorez_chat .chat_msg .chat_msg_text img,
+    #volnorez_chat img[src*="smile"],
+    #volnorez_chat img[src*="smiley"],
+    #volnorez_chat img[src*="/plugins/wchat/"],
+    #volnorez_chat img[src*="/static/smileys/"]{
+      vertical-align:middle !important;
+      width:auto !important;
+      height:auto !important;
+      max-width:none !important;
+      max-height:none !important;
+      transform:none !important;
+      margin:0 1px !important;
     }
 
-    @media (max-width: 900px){
-      body{overflow:auto}
-      .page{
-        height:auto;
-        min-height:100%;
-        padding:8px;
-      }
-      .apps_options_bar{
-        height:auto;
-        line-height:1.3;
-        padding:12px;
-        display:flex;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
-        white-space:normal;
-      }
-      .apps_options_bar_left,
-      .apps_options_bar_right{
-        display:block;
-        width:100%;
-      }
-      .app_summary_name{
-        line-height:1.3;
-      }
-      .content{
-        padding:10px;
-        gap:10px;
-      }
-      #volnorez_chat{
-        min-height:420px;
-      }
-      .apps_options_bar_bottom{
-        padding:12px;
-        align-items:flex-start;
-        flex-direction:column;
-      }
-    }
   </style>
 
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
@@ -320,63 +309,60 @@
   </script>
 </head>
 <body>
-  <div class="page">
-    <div class="page_block" style="height:100%; display:grid; grid-template-rows:auto 1fr auto; min-height:0;">
-      <div class="apps_options_bar">
-        <div class="apps_options_bar_left">
-          <div class="app_summary_name">ПыЛь ДоРоГ FM - Радио и чат</div>
+  <div class="app">
+    <div class="top-menu bevel">
+      <div class="brand">ПыЛь_ДоРоГ FM — Радио и чат</div>
+
+      <div class="menu-group">
+        <button class="menu-button" type="button">Перейти на Волнорез</button>
+        <div class="dropdown">
+          <a class="menu-item" href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">💻 Обычный сайт</a>
+          <a class="menu-item" href="https://m.volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">📱 Мобильная версия</a>
         </div>
-        <div class="apps_options_bar_right">
-          <div class="apps_divided_links">
-            <a href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">Станция</a>
-            <span class="divider">·</span>
-            <a href="https://vk.com/dust_dorogfm" target="_blank" rel="noopener">Группа</a>
-            <span class="divider">·</span>
-            <a href="https://vk.com/topic-227352123_52496434" target="_blank" rel="noopener">Стол заказов</a>
+      </div>
+
+      <div class="menu-group">
+        <button class="menu-button" type="button">Разное</button>
+        <div class="dropdown">
+          <a class="menu-item" href="https://vk.com/dust_dorogfm" target="_blank" rel="noopener">📢 Группа ПыЛь_ДоРоГ FM</a>
+          <a class="menu-item" href="https://vk.com/topic-227352123_52478122" target="_blank" rel="noopener">📝 Книга жалоб и предложений</a>
+          <a class="menu-item" href="https://vk.com/topic-227352123_52496434" target="_blank" rel="noopener">🎵 Стол заказов</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="player-panel bevel">
+        <div class="player-title">Онлайн-эфир станции</div>
+        <div class="player-box">
+          <div id="vplayer001e157d">
+            <a href="https://volnorez.com/pyl_dorog-fm" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>
+            <script async type="text/javascript"
+              src="https://volnorez.com/plugins/jscode/player_js/001e157d/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22skin2%22%2C%22style%22%3A%7B%22bg_clr%22%3A%22237%2C237%2C237%22%2C%22b_clr%22%3A%22179%2C179%2C179%22%2C%22icon_clr%22%3A%2266%2C66%2C66%22%2C%22ch%22%3A%2237%22%2C%22bg_clr1%22%3A%22243%2C243%2C243%22%2C%22bg_clr2%22%3A%22196%2C196%2C196%22%2C%22bg_clr3%22%3A%22183%2C183%2C183%22%2C%22bg_clr4%22%3A%22167%2C167%2C167%22%2C%22txt_clr%22%3A%22205%2C209%2C205%22%7D%7D">
+            </script>
           </div>
         </div>
       </div>
 
-      <div class="apps_main">
-        <div class="content">
-          <div class="player-wrap">
-            <div class="player-label">Онлайн-эфир станции</div>
-            <div class="player-box">
-              <div id="vplayer001e157d">
-                <a href="https://volnorez.com/pyl_dorog-fm" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>
-                <script async type="text/javascript"
-                  src="https://volnorez.com/plugins/jscode/player_js/001e157d/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22skin2%22%2C%22style%22%3A%7B%22bg_clr%22%3A%22237%2C237%2C237%22%2C%22b_clr%22%3A%22179%2C179%2C179%22%2C%22icon_clr%22%3A%2266%2C66%2C66%22%2C%22ch%22%3A%2237%22%2C%22bg_clr1%22%3A%22243%2C243%2C243%22%2C%22bg_clr2%22%3A%22196%2C196%2C196%22%2C%22bg_clr3%22%3A%22183%2C183%2C183%22%2C%22bg_clr4%22%3A%22167%2C167%2C167%22%2C%22txt_clr%22%3A%22205%2C209%2C205%22%7D%7D">
-                </script>
-              </div>
-            </div>
-          </div>
-
-          <div class="chat-wrap">
-            <div class="chat-frame">
-              <div
-                id="volnorez_chat"
-                data-code="001e157d"
-                data-skin-params="'bg_clr':'184,207,227','panel_clr':'216,216,216','ib_clr':'250,250,250','msgbg_clr':'241,241,241','omsgbg_clr':'234,234,234','txt_clr':'30,30,30','b_clr':'247,242,247','icon_clr':'75,134,180','label_clr':'41,69,117','dj_clr':'30,30,30'"
-                data-skin="skin_4">
-              </div>
-              <div class="fallback" id="chatFallback" aria-live="polite">
-                <div class="fallback-inner">
-                  <h3>Чат не загрузился</h3>
-                  <p>Обычно это связано с блокировкой внешнего скрипта, ограничением браузера или ответом Volnorez.</p>
-                  <p style="margin:0">Открой чат напрямую на <a href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">странице станции</a>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="chat-shell bevel">
+        <div class="status-bar bevel">
+          <div>Чат станции Volnorez</div>
+          <div class="status-badge">Смайлы и оформление тянутся с Volnorez</div>
         </div>
-      </div>
-
-      <div class="apps_options_bar_bottom">
-        <div>Мини-приложение станции для эфира и чата</div>
-        <div class="apps_divided_links">
-          <a href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">Открыть Волнорез</a>
-          <span class="divider">·</span>
-          <a href="https://m.volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">Мобильная версия</a>
+        <div class="chat-frame">
+          <div
+            id="volnorez_chat"
+            data-code="001e157d"
+            data-skin-params="'bg_clr':'184,207,227','panel_clr':'216,216,216','ib_clr':'250,250,250','msgbg_clr':'241,241,241','omsgbg_clr':'234,234,234','txt_clr':'30,30,30','b_clr':'247,242,247','icon_clr':'75,134,180','label_clr':'41,69,117','dj_clr':'30,30,30'"
+            data-skin="skin_4">
+          </div>
+          <div class="fallback" id="chatFallback" aria-live="polite">
+            <div class="fallback-inner">
+              <h3 style="margin:0 0 10px">Чат не загрузился</h3>
+              <p style="margin:0 0 10px">Обычно это связано с блокировкой внешнего скрипта, ограничением браузера или ответом Volnorez.</p>
+              <p style="margin:0">Открой чат напрямую на <a href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">странице станции</a>.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -428,6 +414,16 @@
             node.nodeValue = '';
           }
         });
+
+        if (root.querySelectorAll) {
+          root.querySelectorAll('input, textarea').forEach((el) => {
+            const val = (el.value || '').trim().toLowerCase();
+            if (GARBAGE_TEXTS.has(val)) el.value = '';
+
+            const ph = (el.getAttribute('placeholder') || '').trim().toLowerCase();
+            if (GARBAGE_TEXTS.has(ph)) el.setAttribute('placeholder', '');
+          });
+        }
       }
 
       function runAntiTextFix() {
@@ -451,7 +447,7 @@
                 const parent = node.parentElement;
                 if (parent) parent.style.display = 'none';
               }
-              shouldRun = true;
+              shouldRun = true
             } else if (node.nodeType === Node.ELEMENT_NODE) {
               shouldRun = true;
             }
@@ -467,5 +463,81 @@
       });
     })();
   </script>
+
+
+  <script>
+    (function () {
+      const VOLNOREZ_HOST = 'https://volnorez.com';
+
+      function normalizeUrl(url) {
+        if (!url) return url;
+        if (url.startsWith('//')) return 'https:' + url;
+        if (url.startsWith('/')) return VOLNOREZ_HOST + url;
+        return url;
+      }
+
+      function looksLikeSmile(img) {
+        const src = ((img.getAttribute('src') || '') + ' ' + (img.getAttribute('data-src') || '')).toLowerCase();
+        const cls = (img.className || '').toLowerCase();
+        return (
+          src.includes('smile') ||
+          src.includes('smiley') ||
+          src.includes('/plugins/wchat/') ||
+          src.includes('/static/smileys/') ||
+          cls.includes('smile_')
+        );
+      }
+
+      function fixSmileUrls() {
+        const chatRoot = document.getElementById('volnorez_chat');
+        if (!chatRoot) return;
+
+        chatRoot.querySelectorAll('img').forEach((img) => {
+          if (!looksLikeSmile(img)) return;
+
+          const src = img.getAttribute('src') || '';
+          const dataSrc = img.getAttribute('data-src') || '';
+
+          if (!src && dataSrc) {
+            img.setAttribute('src', normalizeUrl(dataSrc));
+          } else if (src) {
+            img.setAttribute('src', normalizeUrl(src));
+          }
+
+          if (!img.dataset.smileFixedBound) {
+            img.dataset.smileFixedBound = '1';
+            img.addEventListener('error', () => {
+              const current = img.getAttribute('src') || '';
+              const fixed = normalizeUrl(current);
+              if (fixed && fixed !== current) {
+                img.src = fixed;
+              }
+            });
+          }
+        });
+      }
+
+      function runSmileFix() {
+        fixSmileUrls();
+      }
+
+      window.addEventListener('load', () => {
+        runSmileFix();
+        setTimeout(runSmileFix, 700);
+        setTimeout(runSmileFix, 1600);
+        setTimeout(runSmileFix, 3200);
+      });
+
+      const observer = new MutationObserver(() => {
+        runSmileFix();
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    })();
+  </script>
+
 </body>
 </html>
