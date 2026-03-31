@@ -3,583 +3,337 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>ПыЛь_ДоРоГ FM — Радио, чат, смайлы и мемы</title>
-  <meta name="theme-color" content="#c9c9c9" />
-  <link rel="preconnect" href="https://volnorez.com" crossorigin>
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
-  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=QS8u5tHPX4QllVnHS538DblRn-U-iJ668tFNegVUKH33zUzJx3uIWtXm6n18WlLk4082xq8xuZq4VRBUTzxZcoDkyCg_IXbcWNxuLsD7GKK4ckW_OOXXQW5Z2yrsj5ke1vrd_J_e7rV8fwdk7jA1Prcu_52v33kwu4at4BDX58CDHDnVdEHybMPQ_8HF16had726JaeF2OHLt6W-97JpP9iLKwoPD6rFtdxJnOS5svto2SZxSJGQ7TMWNMkHOuazFHJd9QJ4XCANbBbi2vZTog" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMGI1Mjg3MjQ2OWJjYmMzOTM4MjIzN2RlOSZ0cz00OTMwNDYmcD1mcyZjaWQ9MSZzaWc9YWZmMzQ2YmIwMWJmZTUzMGI0OTY1MGJlZmFhNjQ4MDdlYjcxYTQzYzc5NTM3M2U0NmQ5NDlmNzI4ODMwMjZiNCZ2PTA"/><style>
+  <title>ПыЛь_ДоРоГ FM — Радио и чат</title>
+
+  <style>
     :root{
       --bg:#d7d7d7;
-      --panel:#d8d8d8;
-      --panel2:#ececec;
-      --edge-light:#ffffff;
-      --edge-dark:#8a8a8a;
+      --shell:#e7e7e7;
+      --panel:#d2d2d2;
+      --panel2:#c7c7c7;
+      --line-dark:#8f8f8f;
+      --line-mid:#b8b8b8;
+      --line-light:#f7f7f7;
       --text:#222;
-      --blue:#597f9c;
-      --chat-bg:#b8cfe3;
-      --chat-panel:#e4e6ed;
-      --chat-border:#f7f2f7;
-      --accent:#3d6f95;
-      --panel-height:238px;
+      --text-soft:#4d4d4d;
+      --accent:#4a83b6;
+      --green:#3fbf07;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:linear-gradient(145deg,#e4e4e4,#bdbdbd);
-      color:var(--text);
-    }
-    .bevel{
-      background:var(--panel);
-      border-top:1px solid var(--edge-light);
-      border-left:1px solid var(--edge-light);
-      border-right:1px solid var(--edge-dark);
-      border-bottom:1px solid var(--edge-dark);
-      box-shadow:inset 1px 1px 0 rgba(255,255,255,.5), inset -1px -1px 0 rgba(0,0,0,.08);
-    }
-    .app{
-      height:100%;
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      padding:8px;
-      overflow:hidden;
-    }
-    .top-menu{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex-wrap:wrap;
-      min-height:46px;
-      padding:8px;
-      background:linear-gradient(#f0f0f0,#cfcfcf);
-    }
-    .brand{
-      font-weight:700;
-      padding:7px 12px;
-      letter-spacing:.2px;
-      background:linear-gradient(#f5f5f5,#d7d7d7);
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #8d8d8d;
-      border-bottom:1px solid #8d8d8d;
-      white-space:nowrap;
-    }
-    .menu-group{position:relative}
-    .menu-button,.toolbar-btn,.action-btn{
-      appearance:none;
-      border:0;
-      cursor:pointer;
-      color:#222;
-      background:linear-gradient(#efefef,#d2d2d2);
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #8d8d8d;
-      border-bottom:1px solid #8d8d8d;
-      font-family:Arial,Helvetica,sans-serif;
-    }
-    .menu-button{
-      padding:8px 34px 8px 12px;
-      min-width:166px;
-      text-align:left;
-      font-size:14px;
-      position:relative;
-    }
-    .menu-button::after{
-      content:'▼';
-      position:absolute;
-      right:10px;
-      top:50%;
-      transform:translateY(-50%);
-      font-size:11px;
-      color:#444;
-    }
-    .menu-button:hover,.toolbar-btn:hover,.action-btn:hover{background:linear-gradient(#f7f7f7,#dcdcdc)}
-    .dropdown{
-      display:none;
-      position:absolute;
-      top:calc(100% + 4px);
-      left:0;
-      z-index:30;
-      min-width:240px;
-      padding:6px;
-      background:#dbdbdb;
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #8d8d8d;
-      border-bottom:1px solid #8d8d8d;
-      box-shadow:3px 3px 10px rgba(0,0,0,.18);
-    }
-    .menu-group:hover .dropdown,
-    .menu-group:focus-within .dropdown{display:block}
-    .menu-item{
-      display:block;
-      padding:8px 10px;
-      text-decoration:none;
-      color:#222;
-      border-radius:4px;
-      font-size:14px;
-    }
-    .menu-item:hover{background:linear-gradient(145deg,#e0e0e0,#f0f0f0)}
 
-    .layout{
-      min-height:0;
-      flex:1;
-      display:grid;
-      grid-template-rows:auto auto 1fr auto;
-      gap:8px;
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Tahoma, Arial, sans-serif;
+      min-height:100%;
+    }
+
+    body{
+      padding:18px;
+    }
+
+    .app{
+      max-width:1280px;
+      margin:0 auto;
+      background:linear-gradient(#efefef,#dddddd);
+      border-radius:22px;
+      border:1px solid #bdbdbd;
+      box-shadow:
+        0 1px 0 #fff inset,
+        0 18px 40px rgba(0,0,0,.18);
+      padding:26px 24px 18px;
+    }
+
+    .title{
+      text-align:center;
+      font-size:34px;
+      font-weight:800;
+      letter-spacing:.3px;
+      color:#2f3540;
+      margin:0 0 18px;
+    }
+
+    .frame{
+      background:#dfdfdf;
+      border-radius:14px;
+      border:1px solid #bbbbbb;
+      box-shadow:
+        0 1px 0 #fdfdfd inset,
+        0 -1px 0 #d0d0d0 inset;
+      padding:18px;
+    }
+
+    .player-panel{
+      background:linear-gradient(#f1f1f1,#e3e3e3);
+      border-radius:12px;
+      border:1px solid #b7b7b7;
+      box-shadow:
+        0 1px 0 #fff inset,
+        0 -1px 0 #cfcfcf inset;
+      padding:12px 14px;
+      margin-bottom:16px;
       overflow:hidden;
     }
-    .player-panel{padding:10px;background:linear-gradient(#efefef,#d6d6d6)}
-    .player-title{font-size:13px;font-weight:700;margin-bottom:8px;color:#3b3b3b}
-    .player-box{
-      padding:8px;
-      background:#e5e5e5;
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #8f8f8f;
-      border-bottom:1px solid #8f8f8f;
-    }
-    .toolbar{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      padding:7px 8px;
-      background:linear-gradient(#efefef,#d8d8d8);
-      flex-wrap:wrap;
-    }
-    .toolbar-btn{padding:7px 12px;font-size:13px}
-    .toolbar-btn.active{background:linear-gradient(#d7e7f5,#b9d0e5)}
-    .toolbar-note{font-size:12px;color:#444;margin-left:auto}
 
     .chat-shell{
-      min-height:0;
-      padding:8px;
-      background:linear-gradient(#dadada,#c7c7c7);
-      overflow:hidden;
-    }
-    .chat-frame{
-      height:100%;
-      min-height:330px;
       position:relative;
-      padding:8px;
-      background:#d6d6d6;
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #8a8a8a;
-      border-bottom:1px solid #8a8a8a;
+      background:#d5d5d5;
+      border-radius:12px;
+      border:1px solid #b5b5b5;
+      padding:0;
       overflow:hidden;
+      min-height:620px;
     }
-    #volnorez_chat{width:100%;height:100%;min-height:314px;display:block}
 
-    .panel-shell{
-      display:none;
-      padding:8px;
-      background:linear-gradient(#d8d8d8,#c8c8c8);
+    .chat-shell::before{
+      content:"";
+      display:block;
+      height:12px;
+      background:linear-gradient(#b8cfe0,#8eacc4);
+      border-bottom:1px solid #7e97ab;
+      box-shadow:0 1px 0 rgba(255,255,255,.65) inset;
     }
-    .panel-shell.show{display:block}
-    .panel-head{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      justify-content:space-between;
-      padding:6px 8px;
-      margin-bottom:8px;
-      background:linear-gradient(#efefef,#d8d8d8);
-      font-size:12px;
-    }
-    .panel-tabs{display:flex;gap:6px;flex-wrap:wrap}
-    .panel-tab{padding:6px 12px;font-size:13px}
-    .panel-tab.active{background:linear-gradient(#d7e7f5,#b9d0e5)}
-    .panel-body{
-      height:var(--panel-height);
-      overflow:auto;
-      padding:8px;
-      background:#e4e6ed;
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #8f8f8f;
-      border-bottom:1px solid #8f8f8f;
-    }
-    .items-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(74px,1fr));
-      gap:8px;
-      align-content:start;
-    }
-    .items-grid.memes{grid-template-columns:repeat(auto-fill,minmax(128px,1fr))}
-    .sticker-btn{
-      padding:6px;
-      min-height:70px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:6px;
+
+    .gear{
+      position:absolute;
+      top:5px;
+      left:8px;
+      z-index:5;
+      width:24px;
+      height:24px;
+      border-radius:6px;
+      background:linear-gradient(#6fa3cf,#4c84b6);
+      border:1px solid #3d6e98;
+      color:#fff;
+      font-size:15px;
+      line-height:22px;
       text-align:center;
-      background:linear-gradient(#f6f6f6,#dbdbdb);
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #909090;
-      border-bottom:1px solid #909090;
-      cursor:pointer;
-      font-size:11px;
-      color:#2b2b2b;
+      box-shadow:0 1px 0 rgba(255,255,255,.35) inset;
+      user-select:none;
+      pointer-events:none;
     }
-    .sticker-btn:hover{background:linear-gradient(#ffffff,#e3e3e3)}
-    .sticker-btn img{display:block;max-width:60px;max-height:58px;object-fit:contain;image-rendering:auto}
-    .items-grid.memes .sticker-btn{min-height:108px;padding:8px}
-    .items-grid.memes .sticker-btn img{max-width:112px;max-height:72px}
-    .panel-footer{
-      margin-top:8px;
-      display:flex;
-      gap:8px;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-    }
-    .action-row{display:flex;gap:8px;flex-wrap:wrap}
-    .action-btn{padding:7px 12px;font-size:13px}
-    .preview-box{
-      flex:1 1 220px;
-      min-height:54px;
-      padding:8px 10px;
-      font-size:12px;
+
+    .chat-body{
       background:#efefef;
-      border-top:1px solid #fff;
-      border-left:1px solid #fff;
-      border-right:1px solid #8f8f8f;
-      border-bottom:1px solid #8f8f8f;
-      display:flex;
-      align-items:center;
-      gap:10px;
+      min-height:608px;
+      padding:10px 10px 12px;
     }
-    .preview-box img{max-height:46px;max-width:72px;object-fit:contain}
-    .preview-meta{line-height:1.35}
-    .preview-meta strong{display:block}
-    .status-line{
-      font-size:12px;color:#3f3f3f;
-      padding:6px 8px;background:linear-gradient(#efefef,#d7d7d7)
-    }
-    .fallback{
-      position:absolute;inset:8px;display:none;place-items:center;text-align:center;padding:24px;
-      background:linear-gradient(#d8d8d8,#c6c6c6);
-      border-top:1px solid #fff;border-left:1px solid #fff;border-right:1px solid #8a8a8a;border-bottom:1px solid #8a8a8a;
-    }
-    .fallback.show{display:grid}
-    .fallback-inner{
-      max-width:520px;padding:18px;background:#efefef;
-      border-top:1px solid #fff;border-left:1px solid #fff;border-right:1px solid #8f8f8f;border-bottom:1px solid #8f8f8f;
-    }
-    .fallback a{color:#234d72}
-    .toast{
-      position:fixed;right:14px;bottom:14px;z-index:60;
-      padding:10px 12px;font-size:13px;display:none;
-      background:linear-gradient(#efefef,#d3d3d3);
-      border-top:1px solid #fff;border-left:1px solid #fff;border-right:1px solid #888;border-bottom:1px solid #888;
-      box-shadow:3px 4px 14px rgba(0,0,0,.22);
-    }
-    .toast.show{display:block}
 
-    .chat_cont{font-family:Arial,Helvetica,sans-serif !important;border:1px solid rgb(247,242,247) !important;background-color:rgb(184,207,227) !important;box-shadow:inset 1px -2px 5px 1px rgba(0,0,0,.45) !important;border-radius:10px !important;overflow:hidden !important}
-    .chat_users_container{background:rgb(228,230,237) !important;border:1px solid rgb(247,242,247) !important;box-shadow:0 -1px 4px 0 rgba(0,0,0,.2) !important}
-    .chat_history_container,.chat_settings,.chat_smileys,.chat_private_tabs>div,.chat_tabs>div,.chat_bottom{font-family:Arial,Helvetica,sans-serif !important}
-    .chat_msg:hover{background-color:rgb(228,230,237) !important}
-    .chat_msg .chat_msg_text img{vertical-align:bottom !important;transform:scale(.9);margin-left:-2px;margin-right:-2px;cursor:pointer}
-    .chat_msg_date span,.chat_nick_input,.chat_common_tab.selected,.chat_private_tabs>div.selected,.chat_users_container,.chat_message_input{background-color:rgb(228,230,237) !important}
-    .chat_usr.chat_ut_owner,.chat_usr.chat_ut_rj,.chat_mynick,.chat_msg_date span{color:rgb(89,127,156) !important}
+    #volnorez_chat{
+      width:100%;
+      min-height:586px;
+      display:block;
+      background:#efefef;
+    }
 
-    @media (max-width:860px){
-      body{overflow:auto}
-      .app{height:auto;min-height:100%}
-      .layout{grid-template-rows:auto auto minmax(340px,1fr) auto}
-      .brand,.menu-group,.menu-button{width:100%}
-      .toolbar-note{margin-left:0;width:100%}
-      .panel-body{height:280px}
+    /* Мягкая подстройка внешнего embed */
+    #volnorez_chat,
+    #volnorez_chat *{
+      font-family:Tahoma, Arial, sans-serif !important;
+    }
+
+    /* Улучшение смайлов и мемов */
+    #volnorez_chat img[src*="smile"],
+    #volnorez_chat img[src*="smiley"],
+    #volnorez_chat [class*="smile_"] img,
+    #volnorez_chat .smile,
+    #volnorez_chat [class*="smile_"]{
+      max-width:none !important;
+      max-height:none !important;
+    }
+
+    #volnorez_chat img[src*="smile"],
+    #volnorez_chat img[src*="smiley"]{
+      width:auto !important;
+      height:auto !important;
+      vertical-align:middle !important;
+      margin:0 3px !important;
+      image-rendering:auto;
+    }
+
+    #volnorez_chat img[src*="mem"],
+    #volnorez_chat img[src*="gif"]{
+      max-width:180px !important;
+      height:auto !important;
+    }
+
+    /* Мобильная адаптация */
+    @media (max-width: 900px){
+      body{padding:8px}
+      .app{
+        border-radius:14px;
+        padding:14px 12px 12px;
+      }
+      .title{
+        font-size:26px;
+        margin-bottom:12px;
+      }
+      .frame{
+        padding:10px;
+      }
+      .player-panel{
+        padding:10px;
+        margin-bottom:10px;
+      }
+      .chat-body{
+        padding:8px;
+      }
+      #volnorez_chat{
+        min-height:520px;
+      }
     }
   </style>
+</head>
+<body>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
   <script>
     (async () => {
-      try { await vkBridge.send('VKWebAppInit'); } catch (e) {}
+      try {
+        if (window.vkBridge) {
+          await vkBridge.send('VKWebAppInit');
+        }
+      } catch (e) {}
     })();
   </script>
-</head>
-<body>
+
   <div class="app">
-    <div class="top-menu bevel">
-      <div class="brand">ПыЛь_ДоРоГ FM — Радио и чат</div>
-      <div class="menu-group">
-        <button class="menu-button" type="button">Перейти на Волнорез</button>
-        <div class="dropdown">
-          <a class="menu-item" href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">💻 Обычный сайт</a>
-          <a class="menu-item" href="https://m.volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">📱 Мобильная версия</a>
-        </div>
-      </div>
-      <div class="menu-group">
-        <button class="menu-button" type="button">Разное</button>
-        <div class="dropdown">
-          <a class="menu-item" href="https://vk.com/dust_dorogfm" target="_blank" rel="noopener">📢 Группа ПыЛь_ДоРоГ FM</a>
-          <a class="menu-item" href="https://vk.com/topic-227352123_52478122" target="_blank" rel="noopener">📝 Книга жалоб и предложений</a>
-          <a class="menu-item" href="https://vk.com/topic-227352123_52496434" target="_blank" rel="noopener">🎵 Стол заказов</a>
-        </div>
-      </div>
-    </div>
+    <h1 class="title">ПыЛь_ДоРоГ FM</h1>
 
-    <div class="layout">
-      <div class="player-panel bevel">
-        <div class="player-title">Онлайн-эфир станции</div>
-        <div class="player-box">
-          <div id="vplayer001e157d">
-            <a href="https://volnorez.com/pyl_dorog-fm" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>
-            <script async type="text/javascript"
-              src="https://volnorez.com/plugins/jscode/player_js/001e157d/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22skin2%22%2C%22style%22%3A%7B%22bg_clr%22%3A%22237%2C237%2C237%22%2C%22b_clr%22%3A%22179%2C179%2C179%22%2C%22icon_clr%22%3A%2266%2C66%2C66%22%2C%22ch%22%3A%2237%22%2C%22bg_clr1%22%3A%22243%2C243%2C243%22%2C%22bg_clr2%22%3A%22196%2C196%2C196%22%2C%22bg_clr3%22%3A%22183%2C183%2C183%22%2C%22bg_clr4%22%3A%22167%2C167%2C167%22%2C%22txt_clr%22%3A%22205%2C209%2C205%22%7D%7D">
-            </script>
-          </div>
+    <div class="frame">
+      <div class="player-panel">
+        <div id="vplayer001e157d">
+          <a href="https://volnorez.com/pyl_dorog-fm" title="радио ПыЛь_ДоРоГ FM">радио ПыЛь_ДоРоГ FM</a>
+          <script
+            async
+            type="text/javascript"
+            src="https://volnorez.com/plugins/jscode/player_js/001e157d/%7B%22share%22%3A%22source%22%2C%22skin%22%3A%22skin2%22%2C%22style%22%3A%7B%22bcolor%22%3A%22bdbdbd%22%2C%22hcolor%22%3A%22f4f4f4%22%2C%22fcolor%22%3A%225f6670%22%2C%22text1color%22%3A%22373d45%22%2C%22text2color%22%3A%2249515d%22%2C%22text3color%22%3A%2248515d%22%2C%22btncolor%22%3A%2257606c%22%2C%22bgcolor%22%3A%22dadada%22%2C%22line1color%22%3A%22ffffff%22%2C%22line2color%22%3A%228b8b8b%22%2C%22slidercolor%22%3A%2257606c%22%7D%7D">
+          </script>
         </div>
       </div>
 
-      <div class="toolbar bevel">
-        <button class="toolbar-btn" id="togglePanelBtn" type="button">🙂 Панель смайлов и мемов</button>
-        <button class="toolbar-btn active" data-tab="smiles" type="button">Смайлы</button>
-        <button class="toolbar-btn" data-tab="memes" type="button">Мемы</button>
-        <div class="toolbar-note">Панель использует родные ассеты Volnorez. Вставка в поле чата — best effort.</div>
-      </div>
-
-      <div class="chat-shell bevel">
-        <div class="status-line bevel">Чат станции Volnorez</div>
-        <div class="chat-frame">
-          <div id="volnorez_chat"
+      <div class="chat-shell">
+        <div class="gear">⚙</div>
+        <div class="chat-body">
+          <div
+            id="volnorez_chat"
             data-code="001e157d"
-            data-skin-params="'bg_clr':'184,207,227','panel_clr':'216,216,216','ib_clr':'250,250,250','msgbg_clr':'241,241,241','omsgbg_clr':'234,234,234','txt_clr':'30,30,30','b_clr':'247,242,247','icon_clr':'75,134,180','label_clr':'41,69,117','dj_clr':'30,30,30'"
-            data-skin="skin_4"></div>
-          <div class="fallback" id="chatFallback" aria-live="polite">
-            <div class="fallback-inner">
-              <h3 style="margin:0 0 10px">Чат не загрузился</h3>
-              <p style="margin:0 0 10px">Обычно это связано с блокировкой внешнего скрипта, ограничением браузера или ответом Volnorez.</p>
-              <p style="margin:0">Открой чат напрямую на <a href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener">странице станции</a>.</p>
-            </div>
+            data-skin="skin_4"
+            data-skin-params="'bg_clr':'222,222,222','panel_clr':'216,216,216','ib_clr':'250,250,250','msgbg_clr':'238,238,238','omsgbg_clr':'229,229,229','txt_clr':'18,18,18','b_clr':'145,145,145','icon_clr':'120,120,120','label_clr':'60,61,61','dj_clr':'63,191,7'">
           </div>
-        </div>
-      </div>
-
-      <div class="panel-shell bevel" id="stickerPanel">
-        <div class="panel-head bevel">
-          <div class="panel-tabs">
-            <button class="panel-tab action-btn active" data-tab="smiles" type="button">Смайлы</button>
-            <button class="panel-tab action-btn" data-tab="memes" type="button">Мемы</button>
-          </div>
-          <div>Клик — попробовать вставить в поле, ниже есть копирование ссылки.</div>
-        </div>
-
-        <div class="panel-body" id="panelBody"></div>
-
-        <div class="panel-footer">
-          <div class="preview-box">
-            <img id="previewImg" src="https://volnorez.com/plugins/wchat/smileys/yes.gif" alt="preview">
-            <div class="preview-meta">
-              <strong id="previewTitle">Выбери смайл или мем</strong>
-              <span id="previewMeta">Потом можно вставить в поле или скопировать ссылку.</span>
-            </div>
-          </div>
-          <div class="action-row">
-            <button class="action-btn" id="insertBtn" type="button">Вставить в поле</button>
-            <button class="action-btn" id="copyBtn" type="button">Копировать ссылку</button>
-            <a class="action-btn" id="openBtn" href="https://volnorez.com/pyl_dorog-fm" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center">Открыть на Volnorez</a>
-          </div>
+          <script async src="https://volnorez.com/plugins/jscode/chat_js"></script>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="toast" id="toast"></div>
-
-  <script async src="https://volnorez.com/plugins/jscode/chat_js"></script>
   <script>
-    const smiles = [
-      {name:'Да', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/yes.gif', cls:'smile_def_18'},
-      {name:'Нет', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/no.gif', cls:'smile_def_19'},
-      {name:'Задумался', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/chin.gif', cls:'smile_def_20'},
-      {name:'Злой', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/angry.gif', cls:'smile_def_21'},
-      {name:'Дьявол', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/devil.gif', cls:'smile_def_22'},
-      {name:'Надменный', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/arrogance.gif', cls:'smile_def_23'},
-      {name:'Счастливый', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/happy.gif', cls:'smile_def_24'},
-      {name:'Неуверенный', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/unshure.gif', cls:'smile_def_25'},
-      {name:'Не слышу', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/not-hear.gif', cls:'smile_def_26'},
-      {name:'Грусть', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/sadness.gif', cls:'smile_def_27'},
-      {name:'Лол', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/lol.gif', cls:'smile_def_28'},
-      {name:'Хитрый', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/trick.gif', cls:'smile_def_29'},
-      {name:'Подмигнул', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/wink.gif', cls:'smile_def_30'},
-      {name:'Достойно', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/worthy.gif', cls:'smile_def_31'},
-      {name:'Поцелуй', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/kiss.gif', cls:'smile_def_32'},
-      {name:'Любовь', kind:'smile', url:'https://volnorez.com/plugins/wchat/smileys/loved.gif', cls:'smile_def_33'}
-    ];
-
-    const memes = [
-      {name:'Краш ПК', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/crash-pc.gif', cls:'smile_def_34'},
-      {name:'Об стену', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/wall.gif', cls:'smile_def_35'},
-      {name:'В наушниках', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/headphones.gif', cls:'smile_def_36'},
-      {name:'Радио DJ', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/radio-dj.gif', cls:'smile_def_37'},
-      {name:'Хип-хоп', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/hip-hop.gif', cls:'smile_def_38'},
-      {name:'Футбол', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/football.gif', cls:'smile_def_39'},
-      {name:'Теннис', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/tennis2.gif', cls:'smile_def_40'},
-      {name:'Ролики', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/roller.gif', cls:'smile_def_41'},
-      {name:'Носилки', kind:'meme', url:'https://volnorez.com/plugins/wchat/smileys/stretcher.gif', cls:'smile_def_42'},
-      {name:'DJ png', kind:'meme', url:'https://volnorez.com/static/smileys/dj/1.png', cls:'smile_gif_12'},
-      {name:'Carnival', kind:'meme', url:'https://volnorez.com/static/smileys/carnival/1.png', cls:'smile_gif_14'},
-      {name:'Meme 8', kind:'meme', url:'https://volnorez.com/static/smileys/8/1.gif', cls:'smile_gif_08'},
-      {name:'Meme 9', kind:'meme', url:'https://volnorez.com/static/smileys/9g/1.gif', cls:'smile_gif_09'},
-      {name:'Meme 11', kind:'meme', url:'https://volnorez.com/static/smileys/11t/1.gif', cls:'smile_gif_11'}
-    ];
-
-    const panel = document.getElementById('stickerPanel');
-    const panelBody = document.getElementById('panelBody');
-    const togglePanelBtn = document.getElementById('togglePanelBtn');
-    const toast = document.getElementById('toast');
-    const previewImg = document.getElementById('previewImg');
-    const previewTitle = document.getElementById('previewTitle');
-    const previewMeta = document.getElementById('previewMeta');
-    const openBtn = document.getElementById('openBtn');
-    const tabButtons = [...document.querySelectorAll('[data-tab]')];
-    const insertBtn = document.getElementById('insertBtn');
-    const copyBtn = document.getElementById('copyBtn');
-
-    let activeTab = 'smiles';
-    let selectedItem = smiles[0];
-
-    function showToast(text){
-      toast.textContent = text;
-      toast.classList.add('show');
-      clearTimeout(showToast._t);
-      showToast._t = setTimeout(() => toast.classList.remove('show'), 2200);
-    }
-
-    function setSelected(item){
-      selectedItem = item;
-      previewImg.src = item.url;
-      previewImg.alt = item.name;
-      previewTitle.textContent = item.name;
-      previewMeta.textContent = `${item.kind === 'meme' ? 'Мем' : 'Смайл'} • ${item.cls} • ассет Volnorez`;
-      openBtn.href = item.url;
-      document.querySelectorAll('.sticker-btn').forEach((el) => {
-        el.style.background = el.dataset.cls === item.cls ? 'linear-gradient(#d7e7f5,#b9d0e5)' : 'linear-gradient(#f6f6f6,#dbdbdb)';
-      });
-    }
-
-    function renderItems(){
-      const items = activeTab === 'smiles' ? smiles : memes;
-      const grid = document.createElement('div');
-      grid.className = `items-grid ${activeTab === 'memes' ? 'memes' : ''}`;
-      items.forEach((item) => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'sticker-btn';
-        btn.dataset.cls = item.cls;
-        btn.innerHTML = `<img src="${item.url}" alt="${item.name}"><span>${item.name}</span>`;
-        btn.addEventListener('click', () => {
-          setSelected(item);
-          tryInsert(item, false);
-        });
-        grid.appendChild(btn);
-      });
-      panelBody.replaceChildren(grid);
-      if (!items.some((item) => item.cls === selectedItem.cls)) {
-        setSelected(items[0]);
-      } else {
-        setSelected(selectedItem);
+    (function () {
+      function isStandaloneTestText(text) {
+        return !!text && text.trim().toLowerCase() === 'test';
       }
-    }
 
-    function updateTabs(){
-      tabButtons.forEach((btn) => {
-        btn.classList.toggle('active', btn.dataset.tab === activeTab);
-      });
-      renderItems();
-    }
+      function hideTestNode(node) {
+        if (!node) return;
 
-    function findEditableInput(){
-      const selectors = [
-        '.chat_message_input[contenteditable="true"]',
-        '.chat_message_input',
-        '[contenteditable="true"].chat_message_input',
-        '[contenteditable="true"][class*="message_input"]'
-      ];
-      for (const selector of selectors) {
-        const node = document.querySelector(selector);
-        if (node) return node;
-      }
-      return null;
-    }
+        const parent = node.parentElement;
+        if (!parent) return;
 
-    function tryInsert(item, manual){
-      const input = findEditableInput();
-      if (!input) {
-        if (manual) showToast('Поле чата не найдено. Можно скопировать ссылку.');
-        return false;
-      }
-      try {
-        input.focus();
-        const html = ` <img src="${item.url}" alt="${item.name}" title="${item.name}" style="max-height:32px;vertical-align:middle"> `;
-        if (document.queryCommandSupported && document.queryCommandSupported('insertHTML')) {
-          document.execCommand('insertHTML', false, html);
-        } else if (input.isContentEditable) {
-          const sel = window.getSelection();
-          const range = sel && sel.rangeCount ? sel.getRangeAt(0) : null;
-          if (range) {
-            range.deleteContents();
-            const temp = document.createElement('div');
-            temp.innerHTML = html;
-            const frag = document.createDocumentFragment();
-            let child;
-            while ((child = temp.firstChild)) frag.appendChild(child);
-            range.insertNode(frag);
-          } else {
-            input.insertAdjacentHTML('beforeend', html);
-          }
-        } else {
-          input.value = (input.value || '') + ' ' + item.url + ' ';
+        const text = (node.nodeValue || '').trim().toLowerCase();
+        if (text !== 'test') return;
+
+        const parentText = (parent.textContent || '').trim().toLowerCase();
+
+        if (parentText === 'test') {
+          parent.style.display = 'none';
+          return;
         }
-        input.dispatchEvent(new Event('input', {bubbles:true}));
-        if (manual) showToast('Попробовал вставить в поле чата.');
-        return true;
-      } catch (err) {
-        if (manual) showToast('Вставка не удалась. Можно скопировать ссылку.');
-        return false;
+
+        node.nodeValue = '';
       }
-    }
 
-    togglePanelBtn.addEventListener('click', () => {
-      panel.classList.toggle('show');
-      togglePanelBtn.classList.toggle('active', panel.classList.contains('show'));
-    });
+      function cleanTests(root = document.body) {
+        if (!root) return;
 
-    tabButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        activeTab = btn.dataset.tab;
-        updateTabs();
+        const walker = document.createTreeWalker(
+          root,
+          NodeFilter.SHOW_TEXT,
+          null
+        );
+
+        const nodesToClean = [];
+
+        while (walker.nextNode()) {
+          const node = walker.currentNode;
+          if (isStandaloneTestText(node.nodeValue)) {
+            nodesToClean.push(node);
+          }
+        }
+
+        nodesToClean.forEach(hideTestNode);
+      }
+
+      function improveVolnorezSmiles(root = document) {
+        const chatRoot = document.querySelector('#volnorez_chat');
+        if (!chatRoot) return;
+
+        chatRoot.querySelectorAll('img').forEach((img) => {
+          const src = (img.getAttribute('src') || '').toLowerCase();
+          const cls = (img.className || '').toLowerCase();
+
+          const isSmile = src.includes('smile') || src.includes('smiley') || cls.includes('smile_');
+          const isMeme = src.includes('mem') || src.includes('gif');
+
+          if (isSmile) {
+            img.style.width = 'auto';
+            img.style.height = 'auto';
+            img.style.maxWidth = 'none';
+            img.style.maxHeight = 'none';
+            img.style.verticalAlign = 'middle';
+            img.style.transform = 'scale(1.3)';
+            img.style.transformOrigin = 'left center';
+            img.style.margin = '0 3px';
+          }
+
+          if (isMeme) {
+            img.style.maxWidth = '180px';
+            img.style.height = 'auto';
+          }
+        });
+      }
+
+      function runAllFixes(root) {
+        cleanTests(root || document.body);
+        improveVolnorezSmiles(root || document);
+      }
+
+      window.addEventListener('load', function () {
+        runAllFixes(document.body);
+        setTimeout(() => runAllFixes(document.body), 1200);
+        setTimeout(() => runAllFixes(document.body), 2500);
       });
-    });
 
-    insertBtn.addEventListener('click', () => tryInsert(selectedItem, true));
-    copyBtn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(selectedItem.url);
-        showToast('Ссылка скопирована.');
-      } catch (err) {
-        showToast('Не удалось скопировать ссылку.');
-      }
-    });
+      const observer = new MutationObserver(function (mutations) {
+        for (const mutation of mutations) {
+          mutation.addedNodes.forEach((added) => {
+            if (added.nodeType === Node.TEXT_NODE) {
+              if (isStandaloneTestText(added.nodeValue)) {
+                hideTestNode(added);
+              }
+            } else if (added.nodeType === Node.ELEMENT_NODE) {
+              runAllFixes(added);
+            }
+          });
+        }
+      });
 
-    window.addEventListener('load', () => {
-      updateTabs();
-      const root = document.getElementById('volnorez_chat');
-      const fallback = document.getElementById('chatFallback');
-      setTimeout(() => {
-        const hasRendered = root && (root.querySelector('*') || root.innerText.trim().length > 0);
-        if (!hasRendered && fallback) fallback.classList.add('show');
-      }, 5000);
-    });
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    })();
   </script>
 </body>
 </html>
