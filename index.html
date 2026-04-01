@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://volnorez.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HfkjNxJ-Lj63rNPkA4oc4gyRo1-BvCt4aYLqV8Hc_MAZnIX5iz4Fv3iqppghuv4wI2oBuQb8-JNzzHaZ_kf3a_g54CLBBt0zOrTMMRVOtbWoZlFrSNTs5xd4w-whG9oWc2RezuVbExoLhIz5GJ2-HxC-9ZtpWYtqEw7frZvxF9TqzkiyeyYZerBWcV1C6ZVyMGlQarBargtwdB1V8V5cfPZVZk2MlJlglSUyONopXTgUf5Sa-zoGNKXVkPAAVpHyztjC107cTBTlS_rrC7FEiQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMGIzYTg3MWY0YWRkNmM0NDFiYWFkNjE1NyZ0cz00OTMwNzUmcD1mcyZjaWQ9MSZzaWc9NWIxM2RhMWRiMzI4NjMwMTNmN2UxODE4YWZkZDlhZDZhODBjNGNkYThiMjM3NmRjN2RmYzQ0YTdmNDBlYjQ0ZCZ2PTA"/><style>
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=KLtY2SjokUQ4yLGWI_T8OVLZuqSR5ukOn_jgLmO1A7SHVgREgHc87GWP4Sp56pDzR9tM1InaBDnfoBM5YrYuOoJZQUH03SlyK_gS4NtWboXiPV2xu0EeRxvA1feUUeRMPAPgEM-_g4wR-ofBYGVXr6r1JbJMH5cZqi3jKIshSj6luMiTf73IVC-sFhcPFXHIDZjhuGHcqQzEssJfKGR1SgeqyUbHMshW8ra0fjVQyMW2fLGiN-uWYiNKyCqSQMHVrYxnJcgZ-s5FmfMXkGdgxg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDQwNDA3MjQ2YWFmMzQ1ZTMxNTM3MjA4MCZ0cz00OTMwNzUmcD1mcyZjaWQ9MSZzaWc9NzBkYTU0M2ZlNzE0YTE0ODgzNDA3YzVjYzM0NjZiMGI1MDAxM2Y2ZWFlNGJjNjFhZWFkMzdjZTQ1OTdlNDcxYiZ2PTA"/><style>
     :root{
       --bg:#cfcfcf;
       --panel:#d4d4d4;
@@ -1418,6 +1418,169 @@ height:28px;
       margin-top:-6px !important;
       margin-bottom:-2px !important;
       vertical-align:bottom !important;
+    }
+
+  
+    /* exact original bottom-line geometry from Volnorez, adapted to gray theme */
+    .chat_bottom{
+      position:absolute !important;
+      width:100% !important;
+      bottom:15px !important;
+      left:0 !important;
+      height:25px !important;
+      padding:0 11px !important;
+      box-sizing:border-box !important;
+      background:transparent !important;
+      overflow:visible !important;
+    }
+
+    .chat_bottom .chat_ban_banner,
+    .chat_bottom .chat_login{
+      display:none !important;
+    }
+
+    .chat_nick_input{
+      position:absolute !important;
+      width:115px !important;
+      left:12px !important;
+      bottom:14px !important;
+      white-space:nowrap !important;
+      overflow:hidden !important;
+      font-size:12px !important;
+      color:rgb(30,30,30) !important;
+      text-align:center !important;
+      border:1px solid #b8b8b8 !important;
+      border-right:1px solid rgb(247,242,247) !important;
+      border-radius:4px 0 0 4px !important;
+      line-height:25px !important;
+      height:25px !important;
+      padding:0 4px !important;
+      box-sizing:border-box !important;
+      background:#e1e1e1 !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.45) !important;
+    }
+    .chat_nick_input.button{
+      font-weight:bold !important;
+      background-color:#d0d0d0 !important;
+      color:rgb(46,39,34) !important;
+      box-shadow: inset 2px -3px 10px 0 rgba(0,0,0,0.15) !important;
+    }
+    .chat_nick_input.button:after{
+      content: ":" !important;
+    }
+
+    .chat_message_container{
+      position:absolute !important;
+      top:0 !important;
+      left:11px !important;
+      right:110px !important;
+      height:25px !important;
+      box-sizing:content-box !important;
+      background-color:#e4e4e4 !important;
+      border:1px solid rgb(247,242,247) !important;
+      border-radius:5px !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.55) !important;
+      overflow:hidden !important;
+    }
+    .chat_message_container > *{
+      position:absolute !important;
+      top:50% !important;
+      transform:translateY(-50%) !important;
+    }
+
+    .chat_message_input{
+      white-space:nowrap !important;
+      font-size:13px !important;
+      color:rgb(30,30,30) !important;
+      line-height:25px !important;
+      height:28px !important;
+      left:125px !important;
+      right:auto !important;
+      width:calc(100% - 180px) !important;
+      overflow:hidden !important;
+      padding:0 !important;
+      margin:0 !important;
+      background:transparent !important;
+      border:0 !important;
+      outline:none !important;
+      box-shadow:none !important;
+      min-height:0 !important;
+      bottom:auto !important;
+    }
+    .chat_message_input:empty:before{
+      content: attr(placeholder) !important;
+      display:block !important;
+      opacity:0.5 !important;
+      text-overflow:ellipsis !important;
+      overflow:hidden !important;
+      color:#777 !important;
+      pointer-events:none !important;
+    }
+    .chat_message_input:focus{
+      outline:none !important;
+    }
+    .chat_message_input > img{
+      margin-bottom:-10px !important;
+      max-height:27px !important;
+      transform:scale(0.9) !important;
+      margin-left:-2px !important;
+      margin-right:-2px !important;
+      margin-top:0 !important;
+      vertical-align:bottom !important;
+    }
+
+    .chat_smile_btn{
+      right:10px !important;
+      width:18px !important;
+      height:20px !important;
+      color:#666 !important;
+      cursor:pointer !important;
+      filter:grayscale(1) saturate(0) brightness(.78) !important;
+    }
+    .chat_bbcode_btn{
+      right:36px !important;
+      width:18px !important;
+      height:20px !important;
+      color:#666 !important;
+      cursor:pointer !important;
+      filter:grayscale(1) saturate(0) brightness(.78) !important;
+    }
+
+    .chat_send_btn{
+      position:relative !important;
+      float:right !important;
+      right:auto !important;
+      bottom:auto !important;
+      width:90px !important;
+      height:25px !important;
+      line-height:25px !important;
+      font-weight:bold !important;
+      text-align:center !important;
+      border-radius:7px !important;
+      font-size:14px !important;
+      box-shadow: inset 2px -3px 10px 0 rgba(0,0,0,0.2) !important;
+      background-color:#7e7e7e !important;
+      background-image:linear-gradient(#989898,#757575) !important;
+      border:1px solid rgba(0,0,0,0.5) !important;
+      margin:0 !important;
+      filter:none !important;
+    }
+    .chat_send_btn .chat_push_btn{
+      position:absolute !important;
+      inset:0 !important;
+      width:100% !important;
+      height:100% !important;
+      line-height:25px !important;
+      background:none !important;
+      color:#fff !important;
+      display:block !important;
+      border:0 !important;
+      font-size:12px !important;
+      font-weight:bold !important;
+    }
+    .chat_send_btn .chat_send_icon{
+      display:none !important;
+      color:rgb(255,255,255) !important;
     }
 
   </style>
