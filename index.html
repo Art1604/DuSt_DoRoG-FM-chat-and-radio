@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>ПыЛь_ДоРоГ FM</title>
+  <title>ПыЛь_ДоРоГ FM — Радио и чат</title>
   <meta name="theme-color" content="#c9c9c9" />
   <link rel="preconnect" href="https://volnorez.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rZptrurM0GWcbel5qAs_yCJCeoUzDUAtRgNNQ3ln8FtAgKV2Xp0kxaRjAFdDFw1OYT5pu7-m5tSZQL0Yf7LrasKQceiZ2zYzsWZ-4jilinGp3vJ3ElSCiLZZ_4a-SnY4igU2tUAlwqx5Nw3Jjhzs5a6igD0uR-O_zox7-Yls-pbEgTP9-xmpgcckMYYwJumX97mvajgIzqeEumtrp0MMaVAyYNCeXCC8vNlePfv2G-samog_jUpUhdi7QcCrNZYwH-86KvmDcs9TUen_9uu_TQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDA0ODA3MWY0OGVlMTMxOTIzMTgwYzUzMiZ0cz00OTMwNzQmcD1mcyZjaWQ9MSZzaWc9NWM4Y2MwYzExYzJiMjNiMjNjYzFkYTZhYTY4NDQzMWRhNmI1ZmYxNDhhZmFiNGQ4ODk2ODRkOWNmYmZlOTIzZSZ2PTA"/><style>
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HfkjNxJ-Lj63rNPkA4oc4gyRo1-BvCt4aYLqV8Hc_MAZnIX5iz4Fv3iqppghuv4wI2oBuQb8-JNzzHaZ_kf3a_g54CLBBt0zOrTMMRVOtbWoZlFrSNTs5xd4w-whG9oWc2RezuVbExoLhIz5GJ2-HxC-9ZtpWYtqEw7frZvxF9TqzkiyeyYZerBWcV1C6ZVyMGlQarBargtwdB1V8V5cfPZVZk2MlJlglSUyONopXTgUf5Sa-zoGNKXVkPAAVpHyztjC107cTBTlS_rrC7FEiQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMGIzYTg3MWY0YWRkNmM0NDFiYWFkNjE1NyZ0cz00OTMwNzUmcD1mcyZjaWQ9MSZzaWc9NWIxM2RhMWRiMzI4NjMwMTNmN2UxODE4YWZkZDlhZDZhODBjNGNkYThiMjM3NmRjN2RmYzQ0YTdmNDBlYjQ0ZCZ2PTA"/><style>
     :root{
       --bg:#cfcfcf;
       --panel:#d4d4d4;
@@ -1281,6 +1281,143 @@ height:28px;
       display:inline-block !important;
       float:none !important;
       clear:none !important;
+    }
+
+  
+    /* unify radio host / DJ nick colors everywhere */
+    .chat_usr.chat_ut_owner,
+    .chat_usr.chat_ut_rj,
+    .chat_mynick.chat_ut_owner,
+    .chat_mynick.chat_ut_rj,
+    .chat_users_container .chat_ut_owner,
+    .chat_users_container .chat_ut_rj,
+    .chat_msg .chat_ut_owner,
+    .chat_msg .chat_ut_rj,
+    .chat_history_container .chat_ut_owner,
+    .chat_history_container .chat_ut_rj{
+      color:#7a5f17 !important;
+      font-weight:700 !important;
+      text-shadow:none !important;
+    }
+
+    /* keep the right sidebar visually consistent */
+    .chat_users_container .chat_usr.chat_ut_owner,
+    .chat_users_container .chat_usr.chat_ut_rj{
+      background:linear-gradient(#ece4c9,#ddd2ae) !important;
+      border:1px solid #b9ab7a !important;
+      border-radius:4px !important;
+      padding:2px 6px !important;
+      margin:1px 2px !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.55) !important;
+      display:block !important;
+    }
+
+    /* neutralize leftover inline blue/red accents on DJ rows */
+    .chat_cont [style*="rgb(89, 127, 156)"].chat_ut_owner,
+    .chat_cont [style*="rgb(89, 127, 156)"].chat_ut_rj,
+    .chat_cont [style*="rgb(75, 134, 180)"].chat_ut_owner,
+    .chat_cont [style*="rgb(75, 134, 180)"].chat_ut_rj,
+    .chat_cont [style*="rgb(41, 69, 117)"].chat_ut_owner,
+    .chat_cont [style*="rgb(41, 69, 117)"].chat_ut_rj{
+      color:#7a5f17 !important;
+    }
+
+  
+    /* stronger host highlighting in right sidebar, including rows with microphone icons */
+    .chat_users_container .chat_usr:has(img):not(:has(img[src*="smile"])) {
+      color:#6f5512 !important;
+      font-weight:700 !important;
+      background:linear-gradient(#eee4c3,#dccf9e) !important;
+      border:1px solid #b9aa73 !important;
+      border-radius:4px !important;
+      padding:2px 6px !important;
+      margin:1px 2px !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.55) !important;
+    }
+
+    .chat_users_container .chat_usr:has(img):not(:has(img[src*="smile"])) img,
+    .chat_history_container .chat_usr:has(img):not(:has(img[src*="smile"])) img,
+    .chat_msg .chat_usr:has(img):not(:has(img[src*="smile"])) img {
+      filter: sepia(1) saturate(1.4) hue-rotate(350deg) brightness(.9) !important;
+    }
+
+    /* safer fallback for rows already marked as DJ/owner */
+    .chat_users_container .chat_usr.chat_ut_owner,
+    .chat_users_container .chat_usr.chat_ut_rj{
+      color:#6f5512 !important;
+      font-weight:700 !important;
+      background:linear-gradient(#eee4c3,#dccf9e) !important;
+      border:1px solid #b9aa73 !important;
+    }
+
+    /* bottom panel: taller and visually balanced */
+    .chat_bottom{
+      bottom:9px !important;
+      height:34px !important;
+      padding:0 11px !important;
+    }
+
+    .chat_nick_input{
+      width:118px !important;
+      left:12px !important;
+      bottom:8px !important;
+      height:28px !important;
+      line-height:28px !important;
+      border-radius:5px 0 0 5px !important;
+      background:#e4e4e4 !important;
+      font-size:13px !important;
+    }
+
+    .chat_message_container{
+      left:130px !important;
+      right:111px !important;
+      bottom:8px !important;
+      height:28px !important;
+      border-radius:0 5px 5px 0 !important;
+      background:#f4f4f4 !important;
+    }
+
+    .chat_message_input{
+      left:10px !important;
+      right:56px !important;
+      top:5px !important;
+      height:18px !important;
+      min-height:18px !important;
+      line-height:18px !important;
+      font-size:13px !important;
+      color:#222 !important;
+    }
+
+    .chat_smile_btn,
+    .chat_bbcode_btn{
+      top:5px !important;
+      width:18px !important;
+      height:18px !important;
+      line-height:18px !important;
+    }
+    .chat_smile_btn{ right:10px !important; }
+    .chat_bbcode_btn{ right:32px !important; }
+
+    .chat_send_btn{
+      right:11px !important;
+      bottom:8px !important;
+      width:95px !important;
+      height:28px !important;
+      line-height:28px !important;
+      border-radius:8px !important;
+      background:linear-gradient(#979797,#737373) !important;
+    }
+
+    .chat_send_btn .chat_push_btn{
+      line-height:28px !important;
+      font-size:12px !important;
+    }
+
+    /* keep input smiles visible inside the taller row */
+    .chat_message_input > img{
+      margin-top:-6px !important;
+      margin-bottom:-2px !important;
+      vertical-align:bottom !important;
     }
 
   </style>
