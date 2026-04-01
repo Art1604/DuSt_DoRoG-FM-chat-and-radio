@@ -12,15 +12,9 @@
     :root{
       --bg:#cfcfcf;
       --panel:#d8d8d8;
-      --panel-2:#ececec;
       --edge-dark:#8a8a8a;
-      --edge-mid:#adadad;
       --edge-light:#ffffff;
       --text:#222;
-      --blue:#597f9c;
-      --chat-bg:#b8cfe3;
-      --chat-panel:#e4e6ed;
-      --chat-border:#f7f2f7;
     }
 
     *{box-sizing:border-box}
@@ -188,7 +182,6 @@
       display:block;
     }
 
-    /* closer to Volnorez full chat look */
     .vchat_cont, #volnorez_chat{height:100%}
     .chat_cont{
       font-family:Arial,Helvetica,sans-serif !important;
@@ -219,32 +212,29 @@
       color:rgb(89,127,156) !important;
     }
 
-    /* smile fix: keep them in one line, not in a column */
-    #volnorez_chat img{
-      image-rendering:auto !important;
-    }
-
-    #volnorez_chat .chat_msg .chat_msg_text,
-    #volnorez_chat .chat_msg_text{
-      white-space:normal !important;
-    }
-
-    #volnorez_chat .chat_msg .chat_msg_text img,
-    #volnorez_chat img[src*="smile"],
-    #volnorez_chat img[src*="smiley"],
-    #volnorez_chat img[src*="/plugins/wchat/"],
-    #volnorez_chat img[src*="/static/smileys/"]{
-      display:inline-block !important;
-      vertical-align:middle !important;
+    /* Оригинальное позиционирование смайлов Volnorez */
+    .chat_msg .chat_msg_text img{
+      vertical-align:bottom !important;
+      transform:scale(0.9) !important;
+      margin-left:-2px !important;
+      margin-right:-2px !important;
+      cursor:pointer;
+      display:inline !important;
       float:none !important;
-      clear:none !important;
       position:static !important;
-      width:auto !important;
-      height:auto !important;
-      max-width:none !important;
-      max-height:none !important;
-      transform:none !important;
-      margin:0 1px !important;
+    }
+
+    .chat_history > div > div > img{
+      vertical-align:bottom !important;
+      display:inline !important;
+      float:none !important;
+      position:static !important;
+    }
+
+    #volnorez_chat .chat_msg_text,
+    #volnorez_chat .chat_msg .chat_msg_text{
+      white-space:normal !important;
+      line-height:1.35 !important;
     }
 
     #volnorez_chat [class*="smile_"],
@@ -252,9 +242,7 @@
       display:inline-block !important;
       float:none !important;
       clear:none !important;
-      vertical-align:middle !important;
-      transform:none !important;
-      margin:0 1px !important;
+      vertical-align:bottom !important;
     }
 
     .fallback{
