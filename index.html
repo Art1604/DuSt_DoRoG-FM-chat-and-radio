@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://volnorez.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XEB12MDsOzgy3slWKjRHVk01jRs1TXzK7shWs0MrlijZcRSDvON0e6VB-XmPG4doyMybgRjXbEwSrboQK_LTd_yYkuRQGR-imloJgbCozGSSaQonEKoKDRVP-bsXe9pzrkeo4JuV50VrI5r8B0tWNAyFj66n1k1VqW6lcoqZUdWNxD2fL0C5vkuKHM0keHe1bYtnkwyjGKIN_HDecuesKJzzWbPqdZRlK4muE87pO1__KRcF8gK-E9u8f-oXSL2Gw0DuLTjCggQehjWN6n_SAg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMGVjMDQ3MWY0YmQ1YzQ5ZDEyNzFmYmU5YyZ0cz00OTMwNzQmcD1mcyZjaWQ9MSZzaWc9NDlhZDkwZDdlYWQ2ZjA1NjI2NDlmODhkOTUyN2ExYjZlMjRiYzE0Y2NmZjUzZWMzZjVmYTVhOGIyMDI0OWQxMSZ2PTA"/><style>
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rZptrurM0GWcbel5qAs_yCJCeoUzDUAtRgNNQ3ln8FtAgKV2Xp0kxaRjAFdDFw1OYT5pu7-m5tSZQL0Yf7LrasKQceiZ2zYzsWZ-4jilinGp3vJ3ElSCiLZZ_4a-SnY4igU2tUAlwqx5Nw3Jjhzs5a6igD0uR-O_zox7-Yls-pbEgTP9-xmpgcckMYYwJumX97mvajgIzqeEumtrp0MMaVAyYNCeXCC8vNlePfv2G-samog_jUpUhdi7QcCrNZYwH-86KvmDcs9TUen_9uu_TQ" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jaGF0Z3B0LmNvbS9iYWNrZW5kLWFwaS9lc3R1YXJ5L2NvbnRlbnQ_aWQ9ZmlsZV8wMDAwMDAwMDA0ODA3MWY0OGVlMTMxOTIzMTgwYzUzMiZ0cz00OTMwNzQmcD1mcyZjaWQ9MSZzaWc9NWM4Y2MwYzExYzJiMjNiMjNjYzFkYTZhYTY4NDQzMWRhNmI1ZmYxNDhhZmFiNGQ4ODk2ODRkOWNmYmZlOTIzZSZ2PTA"/><style>
     :root{
       --bg:#cfcfcf;
       --panel:#d4d4d4;
@@ -1140,6 +1140,148 @@ height:28px;
       vertical-align:bottom !important;
     }
 
+
+  
+    /* restore bottom panel closer to original Volnorez layout */
+    .chat_bottom{
+      position:absolute !important;
+      width:100% !important;
+      bottom:15px !important;
+      left:0 !important;
+      height:25px !important;
+      padding:0 11px !important;
+      box-sizing:border-box !important;
+      background:transparent !important;
+      overflow:visible !important;
+    }
+
+    .chat_nick_input{
+      position:absolute !important;
+      width:115px !important;
+      left:12px !important;
+      bottom:14px !important;
+      white-space:nowrap !important;
+      overflow:hidden !important;
+      font-size:12px !important;
+      color:rgb(30,30,30) !important;
+      text-align:center !important;
+      border:1px solid #b8b8b8 !important;
+      border-right:1px solid rgb(247,242,247) !important;
+      line-height:25px !important;
+      height:25px !important;
+      padding:0 4px !important;
+      box-sizing:border-box !important;
+      border-radius:4px 0 0 4px !important;
+      background:#e6e6e6 !important;
+      box-shadow:none !important;
+    }
+
+    .chat_message_container{
+      position:absolute !important;
+      left:127px !important;
+      right:104px !important;
+      bottom:14px !important;
+      height:25px !important;
+      border:1px solid #b8b8b8 !important;
+      border-left:0 !important;
+      border-radius:0 4px 4px 0 !important;
+      background:#f3f3f3 !important;
+      box-sizing:border-box !important;
+      overflow:hidden !important;
+      box-shadow:none !important;
+    }
+
+    .chat_message_input{
+      position:absolute !important;
+      left:10px !important;
+      right:50px !important;
+      top:3px !important;
+      bottom:auto !important;
+      height:18px !important;
+      min-height:18px !important;
+      line-height:18px !important;
+      padding:0 !important;
+      margin:0 !important;
+      background:transparent !important;
+      border:0 !important;
+      outline:none !important;
+      box-shadow:none !important;
+      white-space:nowrap !important;
+      overflow:hidden !important;
+      color:#222 !important;
+    }
+
+    .chat_message_input:empty:before{
+      content:attr(placeholder);
+      color:#8d8d8d !important;
+      pointer-events:none !important;
+      display:inline !important;
+    }
+
+    .chat_smile_btn,
+    .chat_bbcode_btn{
+      position:absolute !important;
+      top:3px !important;
+      width:18px !important;
+      height:18px !important;
+      line-height:18px !important;
+      filter:grayscale(1) saturate(0) brightness(.78) !important;
+    }
+    .chat_smile_btn{ right:10px !important; }
+    .chat_bbcode_btn{ right:32px !important; }
+
+    .chat_send_btn{
+      position:absolute !important;
+      right:11px !important;
+      bottom:14px !important;
+      width:90px !important;
+      height:25px !important;
+      line-height:25px !important;
+      font-weight:bold !important;
+      text-align:center !important;
+      border-radius:7px !important;
+      font-size:14px !important;
+      box-shadow:inset 2px -3px 10px 0 rgba(0,0,0,0.2) !important;
+      background:linear-gradient(#9b9b9b,#7a7a7a) !important;
+      border:1px solid rgba(0,0,0,0.45) !important;
+      filter:none !important;
+    }
+
+    .chat_send_btn .chat_push_btn{
+      position:absolute !important;
+      inset:0 !important;
+      width:100% !important;
+      height:100% !important;
+      line-height:25px !important;
+      background:none !important;
+      color:#fff !important;
+      border:0 !important;
+      font-size:12px !important;
+      font-weight:bold !important;
+    }
+
+    .chat_send_btn .chat_send_icon{
+      display:none !important;
+    }
+
+    /* input-row smile sizes exactly like original */
+    .chat_message_input > img{
+      vertical-align:bottom !important;
+      margin-top:-8px !important;
+      margin-bottom:-4px !important;
+      transform:none !important;
+      max-width:none !important;
+      max-height:none !important;
+    }
+
+    .chat_message_input [class^="smile_"],
+    .chat_message_input [class*=" smile_"]{
+      vertical-align:bottom !important;
+      transform:none !important;
+      display:inline-block !important;
+      float:none !important;
+      clear:none !important;
+    }
 
   </style>
 
